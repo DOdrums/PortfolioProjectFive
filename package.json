@@ -1,5 +1,5 @@
 {
-  "name": "moments",
+  "name": "melo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,5 +45,8 @@
   },
   "devDependencies": {
     "msw": "^0.35.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
   }
 }
