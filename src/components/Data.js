@@ -13,7 +13,7 @@ const Data = () => {
     fetchPosts();
   }, []);
 
-  return <div>{posts.results}</div>;
+  return <div></div>;
 };
 
 export default Data;
