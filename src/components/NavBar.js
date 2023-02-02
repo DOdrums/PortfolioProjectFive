@@ -29,23 +29,22 @@ const NavBar = () => {
     }
   };
 
-  const addPostIconOld = (
-    <NavLink
-      className={styles.NavLink}
-      activeClassName={styles.Active}
-      to="/posts/create"
-    >
-      <i className="far fa-plus-square"></i>Add post
-    </NavLink>
-  );
   const title = <i className="far fa-plus-square"></i>;
   const addPostIcon = (
     <NavDropdown title={title} id="basic-nav-dropdown">
-      <NavDropdown.Item className={styles.Dropdown}>
-        <NavLink to="/wall">Song</NavLink>
+      <NavDropdown.Item
+        as={NavLink}
+        to="/songs/create"
+        // className={styles.NavDropdown}
+      >
+        Song
       </NavDropdown.Item>
-      <NavDropdown.Item className={styles.Dropdown}>
-        <NavLink to="/posts/create">Post</NavLink>
+      <NavDropdown.Item
+        as={NavLink}
+        to="/posts/create"
+        // className={styles.NavDropdown}
+      >
+        Post
       </NavDropdown.Item>
     </NavDropdown>
   );

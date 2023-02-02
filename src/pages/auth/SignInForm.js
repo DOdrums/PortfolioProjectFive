@@ -89,7 +89,7 @@ const SignInForm = () => {
             ))}
 
             <Button
-              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
+              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright} ${btnStyles.DisplayBlock}`}
               type="submit"
             >
               Sign in

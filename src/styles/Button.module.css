@@ -1,6 +1,5 @@
 .Button {
     font-size: 0.8rem;
-    display: block;
     align-self: center;
     border-radius: 100px;
     border-color: transparent;
@@ -10,6 +9,10 @@
     margin-top: 25px;
     min-width: 75px;
     max-width: 300px;
+}
+
+.DisplayBlock {
+    display: block;
 }
 
 .Button:hover {
