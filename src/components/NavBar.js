@@ -11,6 +11,7 @@ import {
 import axios from "axios";
 import Avatar from "./Avatar";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
+import { NavDropdown } from "react-bootstrap";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
@@ -28,7 +29,7 @@ const NavBar = () => {
     }
   };
 
-  const addPostIcon = (
+  const addPostIconOld = (
     <NavLink
       className={styles.NavLink}
       activeClassName={styles.Active}
@@ -36,6 +37,17 @@ const NavBar = () => {
     >
       <i className="far fa-plus-square"></i>Add post
     </NavLink>
+  );
+  const title = <i className="far fa-plus-square"></i>;
+  const addPostIcon = (
+    <NavDropdown title={title} id="basic-nav-dropdown">
+      <NavDropdown.Item className={styles.Dropdown}>
+        <NavLink to="/wall">Song</NavLink>
+      </NavDropdown.Item>
+      <NavDropdown.Item className={styles.Dropdown}>
+        <NavLink to="/posts/create">Post</NavLink>
+      </NavDropdown.Item>
+    </NavDropdown>
   );
   const loggedInIcons = (
     <>
