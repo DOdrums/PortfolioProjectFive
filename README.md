@@ -328,6 +328,7 @@ Users can already receive notifications via email, but it would be great to have
 ### Code
 
 - [Stackoverflow(answer from 'Rajiv Singh')](https://stackoverflow.com/a/69746387/16545052) - for fixing the Heroku deployment bug.
+- [Stackoverflow(answer from 'Drew Reese')](https://stackoverflow.com/a/72394679) - for making a dropdown menu in the nav bar.
 
 ### Images
 
