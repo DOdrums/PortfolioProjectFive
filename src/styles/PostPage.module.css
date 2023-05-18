@@ -12,15 +12,23 @@ h5 {
 }
 
 #Heart {
-    color: #bcc8c9 !important;
+    color: #bcc8c9;
 }
 
 #Heart:hover {
-    color: #ecab55 !important;
+    color: #ecab55;
+}
+
+#HeartFull {
+    color: #f85032;
+}
+
+#HeartOutline {
+    color: #bcc8c9;
 }
 
 #HeartOutline:hover {
-    color: #f85032 !important;
+    color: #f85032;
 }
 
 #Comment {
