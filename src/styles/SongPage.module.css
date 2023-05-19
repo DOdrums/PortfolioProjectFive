@@ -1,4 +1,4 @@
-.Post {
+.Song {
     background-color: #ffffff;
     border: 1px solid #dadadf;
     border-radius: 2px;
@@ -6,28 +6,28 @@
     text-align: center;
 }
 
-.Post figure,
+.Song figure,
 h5 {
     margin: 0 0;
 }
 
-#Heart {
+#Mic {
     color: #bcc8c9;
 }
 
-#Heart:hover {
+#Mic:hover {
     color: #ecab55;
 }
 
-#HeartFull {
+#MicFull {
     color: #f85032;
 }
 
-#HeartOutline {
+#MicOutline {
     color: #bcc8c9;
 }
 
-#HeartOutline:hover {
+#MicOutline:hover {
     color: #f85032;
 }
 

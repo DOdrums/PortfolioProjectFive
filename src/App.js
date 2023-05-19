@@ -8,6 +8,7 @@ import SignInForm from "./pages/auth/SignInForm";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import SongCreateForm from "./pages/songs/SongCreateForm";
 import PostPage from "./pages/posts/PostPage";
+import SongPage from "./pages/songs/SongPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
           <Route exact path="/songs/create" render={() => <SongCreateForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />} />
+          <Route exact path="/songs/:id" render={() => <SongPage />} />
         </Switch>
       </Container>
     </div>

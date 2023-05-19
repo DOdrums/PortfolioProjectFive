@@ -61,6 +61,17 @@ i:hover {
     color: #bcc8c9;
 }
 
+.Profile {
+    color: #bcc8c9;
+    font-size: 1.3rem;
+}
+
+.Profile:hover {
+    cursor: pointer;
+    transition: color ease-in-out 0.3s;
+    color: #ecab55;
+}
+
 input[type="file"] {
     display: none;
 }
