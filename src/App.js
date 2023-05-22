@@ -9,14 +9,45 @@ import PostCreateForm from "./pages/posts/PostCreateForm";
 import SongCreateForm from "./pages/songs/SongCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import SongPage from "./pages/songs/SongPage";
+import WallHome from "./pages/wall/WallHome";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 function App() {
+  const currentUser = useCurrentUser();
+  const profile_id = currentUser?.profile_id || "";
+
   return (
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
         <Switch>
-          <Route exact path="/" render={() => <h1>Home page</h1>} />
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <WallHome message="No results found. Adjust the search keyword." />
+            )}
+          />
+          <Route
+            exact
+            path="/wall"
+            render={() => (
+              <WallHome
+                message="No results found. Adjust the search keyword."
+                filter={`owner__followed__owner__profile=${profile_id}&`}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/miced"
+            render={() => (
+              <WallHome
+                message="No results found. Adjust the search keyword."
+                filter={`mics__owner__profile=${profile_id}&ordering=-mics__created_at&`}
+              />
+            )}
+          />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />

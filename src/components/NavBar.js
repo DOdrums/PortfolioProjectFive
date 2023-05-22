@@ -61,7 +61,7 @@ const NavBar = () => {
         <NavLink
           className={styles.NavLink}
           activeClassName={styles.Active}
-          to="/liked"
+          to="/miced"
         >
           <i className="fas fa-microphone-alt"></i>Mic'd
         </NavLink>
