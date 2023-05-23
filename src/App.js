@@ -44,7 +44,7 @@ function App() {
             render={() => (
               <WallHome
                 message="No results found. Adjust the search keyword."
-                filter={`mics__owner__profile=${profile_id}&ordering=-mics__created_at&`}
+                filter={`mic__owner__profile=${profile_id}&ordering=-mic__created_at&`}
               />
             )}
           />
