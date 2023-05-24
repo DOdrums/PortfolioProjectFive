@@ -41,18 +41,16 @@ function WallHome({ message, filter = "" }) {
         console.log(err);
       }
     };
-    
+
     setMiced(false);
     setHasLoaded(false);
-    
-    if (pathname === '/miced') {
-      console.log("miced!");
+
+    if (pathname === "/miced") {
       setMiced(true);
     }
 
     fetchPosts();
     fetchSongs();
-
   }, [filter, pathname]);
 
   return (
@@ -61,16 +59,28 @@ function WallHome({ message, filter = "" }) {
         <p>Top charting songs mobile</p>
         {hasLoaded && !miced ? (
           <>
-            { console.log(miced)}
+            {/* {posts.results.length ? ( */}
             {posts.results.length ? (
-              posts.results.map((post) => (
-                <Post key={post.id} {...post} setPosts={setPosts} />
+              posts.results.map((post, index) => (
+                <>
+                  <Post key={post.id} {...post} setPosts={setPosts} />
+                  {songs.results[index] ? (
+                    <Song
+                      key={songs.results[index].id}
+                      {...songs.results[index]}
+                      setSongs={setSongs}
+                    />
+                  ) : null}
+                </>
               ))
             ) : (
               <Container className={appStyles.BorderBox}>
                 <Asset src={NoResults} message={message} />
               </Container>
             )}
+          </>
+        ) : hasLoaded && miced ? (
+          <>
             {songs.results.length ? (
               songs.results.map((song) => (
                 <Song key={song.id} {...song} setSongs={setSongs} />
@@ -81,18 +91,6 @@ function WallHome({ message, filter = "" }) {
               </Container>
             )}
           </>
-        ) : hasLoaded && miced ? (
-            <>
-            {songs.results.length ? (
-              songs.results.map((song) => (
-                <Song key={song.id} {...song} setSongs={setSongs} />
-              ))
-            ) : (
-              <Container className={appStyles.BorderBox}>
-                <Asset src={NoResults} message={message} />
-              </Container>
-            )}
-            </>
         ) : (
           <Container className={appStyles.BorderBox}>
             <Asset spinner />
