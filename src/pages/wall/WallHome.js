@@ -11,6 +11,8 @@ import Post from "../posts/Post";
 import Asset from "../../components/Asset";
 import NoResults from "../../assets/no-results.png";
 import Song from "../songs/Song";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function WallHome({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -24,7 +26,6 @@ function WallHome({ message, filter = "" }) {
       try {
         const { data } = await axiosReq.get(`/posts/?${filter}`);
         setPosts(data);
-        console.log(data);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -35,7 +36,6 @@ function WallHome({ message, filter = "" }) {
       try {
         const { data } = await axiosReq.get(`/songs/?${filter}`);
         setSongs(data);
-        console.log(data);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -59,25 +59,33 @@ function WallHome({ message, filter = "" }) {
         <p>Top charting songs mobile</p>
         {hasLoaded && !miced ? (
           <>
-            {/* {posts.results.length ? ( */}
             {posts.results.length ? (
-              posts.results.map((post, index) => (
-                <>
-                  <Post key={post.id} {...post} setPosts={setPosts} />
-                  {songs.results[index] ? (
-                    <Song
-                      key={songs.results[index].id}
-                      {...songs.results[index]}
-                      setSongs={setSongs}
-                    />
-                  ) : null}
-                </>
-              ))
+              <InfiniteScroll
+                children={posts.results.map((post, index) => (
+                  <>
+                    <Post key={post.id} {...post} setPosts={setPosts} />
+                    {songs.results[index] ? (
+                      <Song
+                        key={songs.results[index].id}
+                        {...songs.results[index]}
+                        setSongs={setSongs}
+                      />
+                    ) : null}
+                  </>
+                ))}
+                dataLength={songs.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!posts.next}
+                next={() => fetchMoreData(posts, setPosts, songs, setSongs)}
+              />
             ) : (
               <Container className={appStyles.BorderBox}>
                 <Asset src={NoResults} message={message} />
               </Container>
             )}
+            {songs.results.slice(posts.results.length).map((song) => (
+              <Song key={`song-${song.id}`} {...song} setSongs={setSongs} />
+            ))}
           </>
         ) : hasLoaded && miced ? (
           <>
