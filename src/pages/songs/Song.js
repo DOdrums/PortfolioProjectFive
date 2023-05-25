@@ -6,6 +6,8 @@ import appStyles from "../../App.module.css";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import { MoreDropdown } from "../../components/MoreDropDown";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Song = (props) => {
   const {
@@ -25,22 +27,34 @@ const Song = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+  const history = useHistory();
+
+  const handleEdit = () => {
+    history.push(`/songs/${id}/edit`);
+  };
+
+  const handleDelete = async () => {
+    try {
+      await axiosRes.delete(`/songs/${id}/`);
+      history.goBack();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handleLike = async () => {
     try {
-      const {data} = await axiosRes.post('/mics/', {song:id})
+      const { data } = await axiosRes.post("/mics/", { song: id });
       setSongs((prevSongs) => ({
         ...prevSongs,
         results: prevSongs.results.map((song) => {
-          return song.id === id
-            ? { ...song, mic_id: data.id }
-            : song;
+          return song.id === id ? { ...song, mic_id: data.id } : song;
         }),
       }));
     } catch (err) {
       console.log(err);
     }
-  }
+  };
 
   const handleUnlike = async () => {
     try {
@@ -48,15 +62,13 @@ const Song = (props) => {
       setSongs((prevSongs) => ({
         ...prevSongs,
         results: prevSongs.results.map((song) => {
-          return song.id === id
-            ? { ...song, mic_id: null }
-            : song;
+          return song.id === id ? { ...song, mic_id: null } : song;
         }),
       }));
     } catch (err) {
       console.log(err);
     }
-  }
+  };
 
   return (
     <Card className={styles.Song}>
@@ -68,12 +80,17 @@ const Song = (props) => {
           </Link>
           <div className="d-flex align-items-center">
             <span>{created_at}</span>
-            {is_owner && songPage && "..."}
+            {is_owner && songPage && (
+              <MoreDropdown
+                handleEdit={handleEdit}
+                handleDelete={handleDelete}
+              />
+            )}
           </div>
         </Media>
       </Card.Body>
       <Link to={`/songs/${id}`}>
-              <audio src={audio} controls /> 
+        <audio src={audio} controls />
       </Link>
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
@@ -88,18 +105,18 @@ const Song = (props) => {
             </OverlayTrigger>
           ) : mic_id ? (
             <span onClick={handleUnlike}>
-                <i id={styles.MicFull} className={`fas  fa-microphone-alt`} />
+              <i id={styles.MicFull} className={`fas  fa-microphone-alt`} />
             </span>
           ) : currentUser ? (
             <span onClick={handleLike}>
-                  <i className={`fas fa-microphone-alt`} id={styles.MicOutline} />
+              <i className={`fas fa-microphone-alt`} id={styles.MicOutline} />
             </span>
           ) : (
             <OverlayTrigger
               placement="top"
               overlay={<Tooltip>Log in to mic songs!</Tooltip>}
             >
-                    <i className="fas fa-microphone-alt" id={styles.Mic} />
+              <i className="fas fa-microphone-alt" id={styles.Mic} />
             </OverlayTrigger>
           )}
           <Link to={`/songs/${id}`}>

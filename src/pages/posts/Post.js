@@ -6,6 +6,8 @@ import appStyles from "../../App.module.css";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import { MoreDropdown } from "../../components/MoreDropDown";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Post = (props) => {
   const {
@@ -25,22 +27,34 @@ const Post = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+  const history = useHistory();
+
+  const handleEdit = () => {
+    history.push(`/posts/${id}/edit`);
+  };
+
+  const handleDelete = async () => {
+    try {
+      await axiosRes.delete(`/posts/${id}/`);
+      history.goBack();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handleLike = async () => {
     try {
-      const {data} = await axiosRes.post('/likes/', {post:id})
+      const { data } = await axiosRes.post("/likes/", { post: id });
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
-          return post.id === id
-            ? { ...post, like_id: data.id }
-            : post;
+          return post.id === id ? { ...post, like_id: data.id } : post;
         }),
       }));
     } catch (err) {
       console.log(err);
     }
-  }
+  };
 
   const handleUnlike = async () => {
     try {
@@ -48,15 +62,13 @@ const Post = (props) => {
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
-          return post.id === id
-            ? { ...post, like_id: null }
-            : post;
+          return post.id === id ? { ...post, like_id: null } : post;
         }),
       }));
     } catch (err) {
       console.log(err);
     }
-  }
+  };
 
   return (
     <Card className={styles.Post}>
@@ -68,7 +80,12 @@ const Post = (props) => {
           </Link>
           <div className="d-flex align-items-center">
             <span>{created_at}</span>
-            {is_owner && postPage && "..."}
+            {is_owner && postPage && (
+              <MoreDropdown
+                handleEdit={handleEdit}
+                handleDelete={handleDelete}
+              />
+            )}
           </div>
         </Media>
       </Card.Body>
@@ -88,18 +105,18 @@ const Post = (props) => {
             </OverlayTrigger>
           ) : like_id ? (
             <span onClick={handleUnlike}>
-                <i id={styles.HeartFull} className={`fas fa-heart`} />
+              <i id={styles.HeartFull} className={`fas fa-heart`} />
             </span>
           ) : currentUser ? (
             <span onClick={handleLike}>
-                  <i className={`far fa-heart`} id={styles.HeartOutline} />
+              <i className={`far fa-heart`} id={styles.HeartOutline} />
             </span>
           ) : (
             <OverlayTrigger
               placement="top"
               overlay={<Tooltip>Log in to like posts!</Tooltip>}
             >
-                    <i className="far fa-heart" id={styles.Heart} />
+              <i className="far fa-heart" id={styles.Heart} />
             </OverlayTrigger>
           )}
           <Link to={`/posts/${id}`}>
