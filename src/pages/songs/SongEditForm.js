@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -7,19 +7,16 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 
-import Asset from "../../components/Asset";
-
-import Upload from "../../assets/upload.png";
-
 import styles from "../../styles/PostCreate.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 // import { useRedirect } from "../../hooks/useRedirect";
 
-function SongCreateForm() {
+function SongEditForm() {
   // useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
 
@@ -32,6 +29,22 @@ function SongCreateForm() {
 
   const audioInput = useRef(null);
   const history = useHistory();
+  const { id } = useParams();
+
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosReq.get(`/songs/${id}/`);
+        const { title, description, audio, is_owner } = data;
+
+        is_owner
+          ? setPostData({ title, description, audio })
+          : history.push("/");
+      } catch (err) {}
+    };
+
+    handleMount();
+  }, [history, id]);
 
   const handleChange = (event) => {
     setPostData({
@@ -56,11 +69,13 @@ function SongCreateForm() {
 
     formData.append("title", title);
     formData.append("description", description);
-    formData.append("audio", audioInput.current.files[0]);
+    if (audioInput?.current?.files[0]) {
+      formData.append("audio", audioInput.current.files[0]);
+    }
 
     try {
-      const { data } = await axiosReq.post("/songs/", formData);
-      history.push(`/songs/${data.id}`);
+      await axiosReq.put(`/songs/${id}/`, formData);
+      history.push(`/songs/${id}`);
     } catch (err) {
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
@@ -108,7 +123,7 @@ function SongCreateForm() {
         cancel
       </Button>
       <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        create
+        save
       </Button>
     </div>
   );
@@ -121,28 +136,19 @@ function SongCreateForm() {
             className={`${appStyles.BorderBox} ${styles.Container} d-flex flex-column justify-content-center`}
           >
             <Form.Group className="text-center">
-              {audio ? (
-                <>
-                  <figure>
-                    <audio src={audio} controls />
-                  </figure>
-                  <div>
-                    <Form.Label
-                      className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
-                      htmlFor="audio-upload"
-                    >
-                      Change the audio
-                    </Form.Label>
-                  </div>
-                </>
-              ) : (
-                <Form.Label
-                  className="d-flex justify-content-center"
-                  htmlFor="audio-upload"
-                >
-                  <Asset src={Upload} message="Click or tap to upload a song" />
-                </Form.Label>
-              )}
+              <>
+                <figure>
+                  <audio src={audio} controls />
+                </figure>
+                <div>
+                  <Form.Label
+                    className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                    htmlFor="audio-upload"
+                  >
+                    Change the audio
+                  </Form.Label>
+                </div>
+              </>
 
               <Form.File
                 id="audio-upload"
@@ -168,4 +174,4 @@ function SongCreateForm() {
   );
 }
 
-export default SongCreateForm;
+export default SongEditForm;
