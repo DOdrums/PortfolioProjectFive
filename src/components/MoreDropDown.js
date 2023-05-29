@@ -25,13 +25,16 @@ export const MoreDropdown = ({ handleEdit, handleDelete }) => {
         className="text-center"
         popperConfig={{ strategy: "fixed" }}
       >
-        <Dropdown.Item
-          className={styles.DropdownItem}
-          onClick={handleEdit}
-          aria-label="edit"
-        >
-          <i id={styles.DropDown} className="fas fa-edit" />
-        </Dropdown.Item>
+        {handleEdit ? (
+          <Dropdown.Item
+            className={styles.DropdownItem}
+            onClick={handleEdit}
+            aria-label="edit"
+          >
+            <i id={styles.DropDown} className="fas fa-edit" />
+          </Dropdown.Item>
+        ) : null}
+
         <Dropdown.Item
           className={styles.DropdownItem}
           onClick={handleDelete}
