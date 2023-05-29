@@ -29,7 +29,7 @@ function PostCreateForm() {
     description: "",
     image: "",
   });
-  const { title, description, image } = postData;
+  const { title, description: description, image } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
