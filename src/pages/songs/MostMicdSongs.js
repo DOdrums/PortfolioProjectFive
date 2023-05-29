@@ -5,7 +5,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Asset from "../../components/Asset";
 
-const MostMicdSongs = () => {
+const MostMicdSongs = ({ mobile }) => {
   const [songData, setSongData] = useState({ popularSongs: { results: [] } });
   const { popularSongs } = songData;
   const currentUser = useCurrentUser();
@@ -27,16 +27,30 @@ const MostMicdSongs = () => {
   }, [currentUser]);
 
   return (
-    <Container className={appStyles.BorderBox}>
+    <Container
+      className={`${appStyles.BorderBox} ${
+        mobile && "d-lg-none text-center mb-3"
+      }`}
+    >
       {popularSongs.results.length ? (
         <>
           {" "}
           <p>Top Charting Songs:</p>
-          {popularSongs.results.map((song, index) => (
-            <p key={song.id}>
-              {index + 1} {song.title}
-            </p>
-          ))}
+          {mobile ? (
+            <div className="d-flex justify-content-around">
+              {popularSongs.results.slice(0, 4).map((song, index) => (
+                <p key={song.id}>
+                  {index + 1} {song.title}
+                </p>
+              ))}
+            </div>
+          ) : (
+            popularSongs.results.map((song, index) => (
+              <p key={song.id}>
+                {index + 1} {song.title}
+              </p>
+            ))
+          )}
         </>
       ) : (
         <Asset spinner />

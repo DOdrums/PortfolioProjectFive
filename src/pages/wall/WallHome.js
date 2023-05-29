@@ -57,7 +57,7 @@ function WallHome({ message, filter = "" }) {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Top charting songs mobile</p>
+        <MostMicdSongs mobile />
         {hasLoaded && !miced ? (
           <>
             {posts.results.length ? (
@@ -107,7 +107,7 @@ function WallHome({ message, filter = "" }) {
         )}
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <MostMicdSongs/>
+        <MostMicdSongs />
       </Col>
     </Row>
   );
