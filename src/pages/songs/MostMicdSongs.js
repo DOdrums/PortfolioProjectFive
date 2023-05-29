@@ -4,6 +4,8 @@ import { Container } from "react-bootstrap";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Asset from "../../components/Asset";
+import styles from "../../styles/MostMicdSong.module.css";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const MostMicdSongs = ({ mobile }) => {
   const [songData, setSongData] = useState({ popularSongs: { results: [] } });
@@ -47,7 +49,11 @@ const MostMicdSongs = ({ mobile }) => {
           ) : (
             popularSongs.results.map((song, index) => (
               <p key={song.id}>
-                {index + 1} {song.title}
+                {index + 1}.{" "}
+                <Link to={`/songs/${song.id}`}>
+                  <i id={styles.Song}>{song.title}</i>
+                </Link>
+                by {song.owner}
               </p>
             ))
           )}
