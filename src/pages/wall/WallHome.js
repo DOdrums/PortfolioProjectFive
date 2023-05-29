@@ -13,6 +13,7 @@ import NoResults from "../../assets/no-results.png";
 import Song from "../songs/Song";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import MostMicdSongs from "../songs/MostMicdSongs";
 
 function WallHome({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -106,7 +107,7 @@ function WallHome({ message, filter = "" }) {
         )}
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <p>Top charting songs for desktop</p>
+        <MostMicdSongs/>
       </Col>
     </Row>
   );
