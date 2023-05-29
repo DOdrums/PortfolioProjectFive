@@ -10,6 +10,7 @@ import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import Song from "./Song";
+import Comment from "../comments/Comment";
 
 function SongPage() {
   const { id } = useParams();
@@ -21,10 +22,12 @@ function SongPage() {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: song }] = await Promise.all([
+        const [{ data: song }, { data: comments }] = await Promise.all([
           axiosReq.get(`/songs/${id}`),
+          axiosReq.get(`/comments/?song=${id}`),
         ]);
         setSong({ results: [song] });
+        setComments(comments);
         console.log(song);
       } catch (err) {
         console.log(err);
@@ -51,6 +54,15 @@ function SongPage() {
           ) : comments.results.length ? (
             "Comments"
           ) : null}
+          {comments.results.length ? (
+            comments.results.map((comment) => (
+              <Comment key={comment.id} {...comment} />
+            ))
+          ) : currentUser ? (
+            <span>No comments yet, be the first to comment!</span>
+          ) : (
+            <span>No comments... yet</span>
+          )}
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
