@@ -28,7 +28,7 @@ function SongCreateForm() {
     description: "",
     audio: "",
   });
-  const { title, description: description, audio } = postData;
+  const { title, description, audio } = postData;
 
   const audioInput = useRef(null);
   const history = useHistory();
