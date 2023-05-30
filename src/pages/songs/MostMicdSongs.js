@@ -37,25 +37,48 @@ const MostMicdSongs = ({ mobile }) => {
       {popularSongs.results.length ? (
         <>
           {" "}
-          <p>Top Charting Songs:</p>
+          <p className={`${styles.Title} text-center`}>Top Charting Songs</p>
           {mobile ? (
             <div className="d-flex justify-content-around">
-              {popularSongs.results.slice(0, 4).map((song, index) => (
-                <p key={song.id}>
-                  {index + 1} {song.title}
+              {popularSongs.results.slice(0, 3).map((song, index) => (
+                <p>
+                  <span id={styles.Position}>{index + 1}. </span>
+                  <Link to={`/songs/${song.id}`}>
+                    <i id={styles.Song}>{song.title}</i>
+                  </Link>
                 </p>
               ))}
             </div>
           ) : (
-            popularSongs.results.map((song, index) => (
-              <p key={song.id}>
-                {index + 1}.{" "}
-                <Link to={`/songs/${song.id}`}>
-                  <i id={styles.Song}>{song.title}</i>
-                </Link>
-                by {song.owner}
-              </p>
-            ))
+            popularSongs.results.map((song, index) =>
+              index % 2 === 0 ? (
+                <p key={song.id} className={styles.ChartItem} id={styles.Grey}>
+                  <span id={styles.Position}>{index + 1}</span>{" "}
+                  <Link to={`/songs/${song.id}`}>
+                    <i id={styles.Song}>{song.title}</i>
+                  </Link>
+                  <p>
+                    {" "}
+                    <span id={styles.Artist} className="ml-4">
+                      by {song.owner}
+                    </span>
+                  </p>
+                </p>
+              ) : (
+                <p key={song.id} className={styles.ChartItem}>
+                  <span id={styles.Position}>{index + 1}</span>{" "}
+                  <Link to={`/songs/${song.id}`}>
+                    <i id={styles.Song}>{song.title}</i>
+                  </Link>
+                  <p>
+                    {" "}
+                    <span id={styles.Artist} className="ml-4">
+                      by {song.owner}
+                    </span>
+                  </p>
+                </p>
+              )
+            )
           )}
         </>
       ) : (
