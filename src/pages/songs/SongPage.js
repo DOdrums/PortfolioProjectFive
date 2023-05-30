@@ -14,6 +14,7 @@ import Comment from "../comments/Comment";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
+import MostMicdSongs from "./MostMicdSongs";
 
 function SongPage() {
   const { id } = useParams();
@@ -43,7 +44,7 @@ function SongPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Popular profiles for mobile</p>
+        <MostMicdSongs mobile />
         <Song {...song.results[0]} setSongs={setSong} songPage />
         <Container className={appStyles.BorderBox}>
           {currentUser ? (
@@ -79,8 +80,8 @@ function SongPage() {
           )}
         </Container>
       </Col>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Popular profiles for desktop
+      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
+        <MostMicdSongs />
       </Col>
     </Row>
   );
