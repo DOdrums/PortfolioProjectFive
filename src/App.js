@@ -12,6 +12,7 @@ import SongEditForm from "./pages/songs/SongEditForm";
 import PostPage from "./pages/posts/PostPage";
 import SongPage from "./pages/songs/SongPage";
 import WallHome from "./pages/wall/WallHome";
+import ProfilePage from "./pages/profiles/ProfilePage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
           <Route exact path="/songs/:id/edit" render={() => <SongEditForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/songs/:id" render={() => <SongPage />} />
+          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
         </Switch>
       </Container>
     </div>
