@@ -9,6 +9,7 @@ import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import NoResults from "../../assets/no-results.png";
 
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -19,9 +20,15 @@ import {
 import { Button, Image } from "react-bootstrap";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import MostMicdSongs from "../songs/MostMicdSongs";
+import InfiniteScroll from "react-infinite-scroll-component";
+import Post from "../posts/Post";
+import Song from "../songs/Song";
+import { fetchMoreData } from "../../utils/utils";
 
-function ProfilePage() {
+function ProfilePage({ message }) {
   const [hasLoaded, setHasLoaded] = useState(false);
+  const [profilePosts, setProfilePosts] = useState({ results: [] });
+  const [profileSongs, setProfileSongs] = useState({ results: [] });
   const currentUser = useCurrentUser();
   const { id } = useParams();
   const setProfileData = useSetProfileData();
@@ -32,13 +39,23 @@ function ProfilePage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [{ data: pageProfile }] = await Promise.all([
+        const [
+          { data: pageProfile },
+          { data: profilePosts },
+          { data: profileSongs },
+        ] = await Promise.all([
           axiosReq.get(`/profiles/${id}/`),
+          axiosReq.get(`/posts/?owner__profile=${id}`),
+          axiosReq.get(`/songs/?owner__profile=${id}`),
         ]);
         setProfileData((prevState) => ({
           ...prevState,
           pageProfile: { results: [pageProfile] },
         }));
+        setProfilePosts(profilePosts);
+        setProfileSongs(profileSongs);
+        console.log(profilePosts.results);
+        console.log(profileSongs.results);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -99,6 +116,40 @@ function ProfilePage() {
       <hr />
       <p className="text-center">Profile owner's posts</p>
       <hr />
+      {profilePosts.results.length ? (
+        <InfiniteScroll
+          children={profilePosts.results.map((post, index) => (
+            <>
+              <Post key={post.id} {...post} setPosts={setProfilePosts} />
+              {profileSongs.results[index] ? (
+                <Song
+                  key={profileSongs.results[index].id}
+                  {...profileSongs.results[index]}
+                  setSongs={setProfileSongs}
+                />
+              ) : null}
+            </>
+          ))}
+          dataLength={profileSongs.results.length}
+          loader={<Asset spinner />}
+          hasMore={!!profilePosts.next}
+          next={() =>
+            fetchMoreData(
+              profilePosts,
+              setProfilePosts,
+              profileSongs,
+              setProfileSongs
+            )
+          }
+        />
+      ) : (
+        <Container className={appStyles.BorderBox}>
+          <Asset src={NoResults} message={message} />
+        </Container>
+      )}
+      {profileSongs.results.slice(profilePosts.results.length).map((song) => (
+        <Song key={`song-${song.id}`} {...song} setSongs={setProfileSongs} />
+      ))}
     </>
   );
 

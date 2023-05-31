@@ -59,7 +59,13 @@ function App() {
           <Route exact path="/songs/:id/edit" render={() => <SongEditForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/songs/:id" render={() => <SongPage />} />
-          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route
+            exact
+            path="/profiles/:id"
+            render={() => (
+              <ProfilePage message="No results found. This profile doesn't have any posts or songs yet!" />
+            )}
+          />
         </Switch>
       </Container>
     </div>
