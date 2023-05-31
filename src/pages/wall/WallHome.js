@@ -64,10 +64,14 @@ function WallHome({ message, filter = "" }) {
               <InfiniteScroll
                 children={posts.results.map((post, index) => (
                   <>
-                    <Post key={post.id} {...post} setPosts={setPosts} />
+                    <Post
+                      key={`post-${post.id}-${index}`}
+                      {...post}
+                      setPosts={setPosts}
+                    />
                     {songs.results[index] ? (
                       <Song
-                        key={songs.results[index].id}
+                        key={`song-${songs.results[index].id}-${index}`}
                         {...songs.results[index]}
                         setSongs={setSongs}
                       />
@@ -91,8 +95,12 @@ function WallHome({ message, filter = "" }) {
         ) : hasLoaded && miced ? (
           <>
             {songs.results.length ? (
-              songs.results.map((song) => (
-                <Song key={song.id} {...song} setSongs={setSongs} />
+              songs.results.map((song, index) => (
+                <Song
+                  key={`${song.id}-${index}`}
+                  {...song}
+                  setSongs={setSongs}
+                />
               ))
             ) : (
               <Container className={appStyles.BorderBox}>

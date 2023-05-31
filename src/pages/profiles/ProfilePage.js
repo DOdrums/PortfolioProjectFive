@@ -120,10 +120,14 @@ function ProfilePage({ message }) {
         <InfiniteScroll
           children={profilePosts.results.map((post, index) => (
             <>
-              <Post key={post.id} {...post} setPosts={setProfilePosts} />
+              <Post
+                key={`${post.id}-${index}`}
+                {...post}
+                setPosts={setProfilePosts}
+              />
               {profileSongs.results[index] ? (
                 <Song
-                  key={profileSongs.results[index].id}
+                  key={`song-${index}-${profileSongs.results[index].id}`}
                   {...profileSongs.results[index]}
                   setSongs={setProfileSongs}
                 />
@@ -147,9 +151,15 @@ function ProfilePage({ message }) {
           <Asset src={NoResults} message={message} />
         </Container>
       )}
-      {profileSongs.results.slice(profilePosts.results.length).map((song) => (
-        <Song key={`song-${song.id}`} {...song} setSongs={setProfileSongs} />
-      ))}
+      {profileSongs.results
+        .slice(profilePosts.results.length)
+        .map((song, index) => (
+          <Song
+            key={`song-${song.id}-${index}`}
+            {...song}
+            setSongs={setProfileSongs}
+          />
+        ))}
     </>
   );
 
