@@ -36,12 +36,11 @@ const MostMicdSongs = ({ mobile }) => {
     >
       {popularSongs.results.length ? (
         <>
-          {" "}
           <p className={`${styles.Title} text-center`}>Top Charting Songs</p>
           {mobile ? (
             <div className="d-flex justify-content-around">
               {popularSongs.results.slice(0, 3).map((song, index) => (
-                <p>
+                <p key={song.id}>
                   <span id={styles.Position}>{index + 1}. </span>
                   <Link to={`/songs/${song.id}`}>
                     <i id={styles.Song}>{song.title}</i>
@@ -57,12 +56,11 @@ const MostMicdSongs = ({ mobile }) => {
                   <Link to={`/songs/${song.id}`}>
                     <i id={styles.Song}>{song.title}</i>
                   </Link>
-                  <p>
-                    {" "}
+                  <span className="d-block mb-3">
                     <span id={styles.Artist} className="ml-4">
                       by {song.owner}
                     </span>
-                  </p>
+                  </span>
                 </p>
               ) : (
                 <p key={song.id} className={styles.ChartItem}>
@@ -70,12 +68,11 @@ const MostMicdSongs = ({ mobile }) => {
                   <Link to={`/songs/${song.id}`}>
                     <i id={styles.Song}>{song.title}</i>
                   </Link>
-                  <p>
-                    {" "}
+                  <span className="d-block mb-3">
                     <span id={styles.Artist} className="ml-4">
                       by {song.owner}
                     </span>
-                  </p>
+                  </span>
                 </p>
               )
             )
