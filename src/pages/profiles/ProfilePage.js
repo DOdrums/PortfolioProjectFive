@@ -114,9 +114,9 @@ function ProfilePage({ message }) {
   const mainProfilePosts = (
     <>
       <hr />
-      <p className="text-center">Profile owner's posts</p>
+      <p className="text-center">{profile?.owner}'s posts</p>
       <hr />
-      {profilePosts.results.length ? (
+      {profilePosts.results.length || profileSongs.results.length ? (
         <InfiniteScroll
           children={profilePosts.results.map((post, index) => (
             <>
