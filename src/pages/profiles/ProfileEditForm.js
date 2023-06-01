@@ -29,8 +29,23 @@ const ProfileEditForm = () => {
     name: "",
     description: "",
     avatar: "",
+    subname: "",
+    contact_info: "",
+    status: "",
+    country_code: "",
   });
-  const { name, description, avatar } = profileData;
+  const {
+    name,
+    description,
+    avatar,
+    subname,
+    contact_info,
+    status,
+    country_code,
+  } = profileData;
+
+  const [statusChoices, setStatusChoices] = useState([]);
+  const [countryChoices, setCountryChoices] = useState([]);
 
   const [errors, setErrors] = useState({});
 
@@ -39,8 +54,26 @@ const ProfileEditForm = () => {
       if (currentUser?.profile_id?.toString() === id) {
         try {
           const { data } = await axiosReq.get(`/profiles/${id}/`);
-          const { name, description, avatar } = data;
-          setProfileData({ name, description, avatar });
+          const {
+            name,
+            description,
+            avatar,
+            subname,
+            contact_info,
+            status,
+            country_code,
+          } = data;
+          setProfileData({
+            name,
+            description,
+            avatar,
+            subname,
+            contact_info,
+            status,
+            country_code,
+          });
+          setStatusChoices(data.status_choices);
+          setCountryChoices(data.country_choices);
         } catch (err) {
           console.log(err);
           history.push("/");
@@ -65,6 +98,10 @@ const ProfileEditForm = () => {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("description", description);
+    formData.append("subname", subname);
+    formData.append("contact_info", contact_info);
+    formData.append("status", status);
+    formData.append("country_code", country_code);
 
     if (imageFile?.current?.files[0]) {
       formData.append("image", imageFile?.current?.files[0]);
@@ -86,12 +123,76 @@ const ProfileEditForm = () => {
   const textFields = (
     <>
       <Form.Group>
+        <Form.Label>Name</Form.Label>
+        <Form.Control
+          type="text"
+          value={name}
+          onChange={handleChange}
+          name="name"
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Status</Form.Label>
+        <Form.Control
+          as="select"
+          name="status"
+          value={status}
+          onChange={handleChange}
+        >
+          <option value="" disabled>
+            Select status
+          </option>
+          {Object.entries(statusChoices).map(([abr, choice]) => (
+            <option key={abr} value={abr}>
+              {choice}
+            </option>
+          ))}
+        </Form.Control>
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Country</Form.Label>
+        <Form.Control
+          as="select"
+          name="country_code"
+          value={country_code}
+          onChange={handleChange}
+        >
+          <option value="" disabled>
+            Select country
+          </option>
+          {Object.entries(countryChoices).map(([ccode, country]) => (
+            <option key={ccode} value={ccode}>
+              {country}
+            </option>
+          ))}
+        </Form.Control>
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Alias</Form.Label>
+        <Form.Control
+          type="text"
+          value={subname}
+          onChange={handleChange}
+          name="subname"
+        />
+      </Form.Group>
+      <Form.Group>
         <Form.Label>Bio</Form.Label>
         <Form.Control
           as="textarea"
           value={description}
           onChange={handleChange}
           name="description"
+          rows={7}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Contact info</Form.Label>
+        <Form.Control
+          as="textarea"
+          value={contact_info}
+          onChange={handleChange}
+          name="contact_info"
           rows={7}
         />
       </Form.Group>
@@ -155,6 +256,11 @@ const ProfileEditForm = () => {
           </Container>
         </Col>
         <Col md={5} lg={6} className="d-none d-md-block p-0 p-md-2 text-center">
+          {Object.entries(statusChoices).map(([key, name]) => (
+            <p>
+              {key} and {name}
+            </p>
+          ))}
           <Container className={appStyles.BorderBox}>{textFields}</Container>
         </Col>
       </Row>

@@ -108,9 +108,42 @@ function ProfilePage({ message }) {
               </Button>
             ))}
         </Col>
-        {profile?.description && (
-          <Col className="p-3">{profile.description}</Col>
-        )}
+        <Row className={styles.ProfileValues}>
+          {profile?.name && (
+            <Col xs={12} className="p-1">
+              <strong>Name: </strong> {profile.name}
+            </Col>
+          )}
+          {profile?.subname && (
+            <Col xs={12} className="p-1">
+              <strong>Alias: </strong> {profile.subname}
+            </Col>
+          )}
+          {profile?.description && (
+            <Col className="p-1">
+              <strong>Bio: </strong>
+              {profile.description}
+            </Col>
+          )}
+          {profile?.contact_info && (
+            <Col xs={12} className="p-1">
+              <strong>Contact info: </strong>
+              {profile.contact_info}
+            </Col>
+          )}
+          {profile?.country && (
+            <Col xs={12} className="p-1">
+              <strong>Country: </strong>
+              {profile.country}
+            </Col>
+          )}
+          {profile?.status_name && (
+            <Col xs={12} className="p-1">
+              <strong>Status: </strong>
+              {profile.status_name}
+            </Col>
+          )}
+        </Row>
       </Row>
     </>
   );

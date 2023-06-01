@@ -5,9 +5,21 @@
     margin: 4px;
 }
 
+.ProfileValues {
+    text-align: left;
+    margin-left: 39%;
+}
+
 @media screen and (max-width: 991px) {
     .ProfileImage {
         width: 250px;
         height: 250px;
+    }
+}
+
+@media screen and (max-width: 581px) {
+    .ProfileValues {
+        text-align: left;
+        margin-left: 25%;
     }
 }
