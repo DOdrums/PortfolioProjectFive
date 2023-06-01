@@ -14,6 +14,9 @@ import SongPage from "./pages/songs/SongPage";
 import WallHome from "./pages/wall/WallHome";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
+import UsernameForm from "./pages/profiles/UsernameForm";
+import UserPasswordForm from "./pages/profiles/UserPasswordForm";
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -65,6 +68,21 @@ function App() {
             render={() => (
               <ProfilePage message="No results found. This profile doesn't have any posts or songs yet!" />
             )}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit/username"
+            render={() => <UsernameForm />}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit/password"
+            render={() => <UserPasswordForm />}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit"
+            render={() => <ProfileEditForm />}
           />
         </Switch>
       </Container>
