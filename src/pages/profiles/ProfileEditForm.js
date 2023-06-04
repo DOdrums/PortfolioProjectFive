@@ -249,11 +249,6 @@ const ProfileEditForm = () => {
           </Container>
         </Col>
         <Col md={5} lg={6} className="d-none d-md-block p-0 p-md-2 text-center">
-          {Object.entries(statusChoices).map(([key, name]) => (
-            <p>
-              {key} and {name}
-            </p>
-          ))}
           <Container className={appStyles.BorderBox}>{textFields}</Container>
         </Col>
       </Row>
