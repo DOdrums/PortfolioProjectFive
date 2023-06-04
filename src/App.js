@@ -18,6 +18,7 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import InstrumentEditForm from "./pages/profiles/InstrumentEditForm";
+import NotFound from "./components/NotFound";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -90,6 +91,7 @@ function App() {
             path="/profiles/:id/edit/instrument"
             render={() => <InstrumentEditForm />}
           />
+          <Route render={() => <NotFound />} />
         </Switch>
       </Container>
     </div>
