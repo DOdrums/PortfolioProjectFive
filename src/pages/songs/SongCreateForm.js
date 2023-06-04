@@ -17,10 +17,10 @@ import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
-// import { useRedirect } from "../../hooks/useRedirect";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function SongCreateForm() {
-  // useRedirect("loggedOut");
+  useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
