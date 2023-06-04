@@ -59,7 +59,7 @@ function ProfilePage({ message }) {
         setProfilePosts(profilePosts);
         setProfileSongs(profileSongs);
         setInstrument(instrument);
-        console.log(instrument.results);
+        console.log(pageProfile);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -137,7 +137,7 @@ function ProfilePage({ message }) {
           {profile?.country && (
             <Col xs={12} className="p-1">
               <strong>Country: </strong>
-              {profile.country}
+              {profile.country_name}
             </Col>
           )}
           {profile?.status_name && (

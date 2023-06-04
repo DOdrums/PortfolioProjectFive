@@ -32,17 +32,10 @@ const ProfileEditForm = () => {
     subname: "",
     contact_info: "",
     status: "",
-    country_code: "",
+    country: "",
   });
-  const {
-    name,
-    description,
-    avatar,
-    subname,
-    contact_info,
-    status,
-    country_code,
-  } = profileData;
+  const { name, description, avatar, subname, contact_info, status, country } =
+    profileData;
 
   const [statusChoices, setStatusChoices] = useState([]);
   const [countryChoices, setCountryChoices] = useState([]);
@@ -61,7 +54,7 @@ const ProfileEditForm = () => {
             subname,
             contact_info,
             status,
-            country_code,
+            country,
           } = data;
           setProfileData({
             name,
@@ -70,7 +63,7 @@ const ProfileEditForm = () => {
             subname,
             contact_info,
             status,
-            country_code,
+            country,
           });
           setStatusChoices(data.status_choices);
           setCountryChoices(data.country_choices);
@@ -101,7 +94,7 @@ const ProfileEditForm = () => {
     formData.append("subname", subname);
     formData.append("contact_info", contact_info);
     formData.append("status", status);
-    formData.append("country_code", country_code);
+    formData.append("country", country);
 
     if (imageFile?.current?.files[0]) {
       formData.append("avatar", imageFile?.current?.files[0]);
@@ -153,8 +146,8 @@ const ProfileEditForm = () => {
         <Form.Label>Country</Form.Label>
         <Form.Control
           as="select"
-          name="country_code"
-          value={country_code}
+          name="country"
+          value={country}
           onChange={handleChange}
         >
           <option value="" disabled>
