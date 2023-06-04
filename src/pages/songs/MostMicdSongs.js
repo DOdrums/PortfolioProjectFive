@@ -36,7 +36,7 @@ const MostMicdSongs = ({ mobile }) => {
     >
       {popularSongs.results.length ? (
         <>
-          <p className={`${styles.Title} text-center`}>Top Charting Songs</p>
+          <p className={`${styles.Title} text-center`}>Most Mic'd Songs</p>
           {mobile ? (
             <div className="d-flex justify-content-around">
               {popularSongs.results.slice(0, 3).map((song, index) => (
