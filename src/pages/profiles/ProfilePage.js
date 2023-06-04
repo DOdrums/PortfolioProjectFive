@@ -30,6 +30,7 @@ function ProfilePage({ message }) {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [profilePosts, setProfilePosts] = useState({ results: [] });
   const [profileSongs, setProfileSongs] = useState({ results: [] });
+  const [instrument, setInstrument] = useState({ results: [] });
   const currentUser = useCurrentUser();
   const { id } = useParams();
   const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData();
@@ -44,10 +45,12 @@ function ProfilePage({ message }) {
           { data: pageProfile },
           { data: profilePosts },
           { data: profileSongs },
+          { data: instrument },
         ] = await Promise.all([
           axiosReq.get(`/profiles/${id}/`),
           axiosReq.get(`/posts/?owner__profile=${id}`),
           axiosReq.get(`/songs/?owner__profile=${id}`),
+          axiosReq.get(`/instruments/?owner__profile=${id}`),
         ]);
         setProfileData((prevState) => ({
           ...prevState,
@@ -55,8 +58,8 @@ function ProfilePage({ message }) {
         }));
         setProfilePosts(profilePosts);
         setProfileSongs(profileSongs);
-        console.log(profilePosts.results);
-        console.log(profileSongs.results);
+        setInstrument(instrument);
+        console.log(instrument.results);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -143,6 +146,14 @@ function ProfilePage({ message }) {
               {profile.status_name}
             </Col>
           )}
+          {instrument.results.length
+            ? instrument.results.map((instrument) => (
+                <Col xs={12} className="p-1">
+                  <strong>Instrument: </strong>
+                  {instrument.instrument_name} ({instrument.experience_name})
+                </Col>
+              ))
+            : null}
         </Row>
       </Row>
     </>
