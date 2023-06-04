@@ -104,7 +104,7 @@ const ProfileEditForm = () => {
     formData.append("country_code", country_code);
 
     if (imageFile?.current?.files[0]) {
-      formData.append("image", imageFile?.current?.files[0]);
+      formData.append("avatar", imageFile?.current?.files[0]);
     }
 
     try {
