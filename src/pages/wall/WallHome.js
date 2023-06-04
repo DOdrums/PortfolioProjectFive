@@ -29,7 +29,7 @@ function WallHome({ message, filter = "" }) {
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
@@ -39,7 +39,7 @@ function WallHome({ message, filter = "" }) {
         setSongs(data);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 

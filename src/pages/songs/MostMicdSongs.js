@@ -21,7 +21,7 @@ const MostMicdSongs = ({ mobile }) => {
           popularSongs: data,
         }));
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 

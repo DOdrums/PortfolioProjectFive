@@ -59,10 +59,9 @@ function ProfilePage({ message }) {
         setProfilePosts(profilePosts);
         setProfileSongs(profileSongs);
         setInstrument(instrument);
-        console.log(pageProfile);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     fetchData();

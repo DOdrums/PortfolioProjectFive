@@ -38,7 +38,7 @@ const Song = (props) => {
       await axiosRes.delete(`/songs/${id}/`);
       history.goBack();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -52,7 +52,7 @@ const Song = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -66,7 +66,7 @@ const Song = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 

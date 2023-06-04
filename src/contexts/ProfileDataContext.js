@@ -55,7 +55,7 @@ export const ProfileDataProvider = ({ children }) => {
           ...prevState,
         }));
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 

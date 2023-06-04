@@ -48,7 +48,7 @@ const InstrumentEditForm = () => {
           setInstrumentChoices(data.results[0].instrument_choices);
           setExperienceChoices(data.results[0].experience_choices);
         } catch (err) {
-          console.log(err);
+          // console.log(err);
           history.push("/");
         }
       } else {
@@ -79,7 +79,7 @@ const InstrumentEditForm = () => {
       }));
       history.goBack();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       setErrors(err.response?.data);
     }
   };

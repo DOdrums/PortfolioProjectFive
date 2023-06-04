@@ -32,9 +32,8 @@ function SongPage() {
         ]);
         setSong({ results: [song] });
         setComments(comments);
-        console.log(song);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
