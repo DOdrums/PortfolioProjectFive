@@ -14,6 +14,7 @@ import Song from "../songs/Song";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import MostMicdSongs from "../songs/MostMicdSongs";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function WallHome({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -21,6 +22,7 @@ function WallHome({ message, filter = "" }) {
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const [miced, setMiced] = useState(false);
+  const currentUser = useCurrentUser();
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -52,7 +54,7 @@ function WallHome({ message, filter = "" }) {
 
     fetchPosts();
     fetchSongs();
-  }, [filter, pathname]);
+  }, [filter, pathname, currentUser]);
 
   return (
     <Row className="h-100">
