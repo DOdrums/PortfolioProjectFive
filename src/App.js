@@ -17,6 +17,7 @@ import { useCurrentUser } from "./contexts/CurrentUserContext";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+import InstrumentEditForm from "./pages/profiles/InstrumentEditForm";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -83,6 +84,11 @@ function App() {
             exact
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit/instrument"
+            render={() => <InstrumentEditForm />}
           />
         </Switch>
       </Container>

@@ -61,6 +61,13 @@ export function ProfileEditDropdown({ id }) {
           <i className="fas fa-edit" id={styles.DropDown} /> edit profile
         </Dropdown.Item>
         <Dropdown.Item
+          onClick={() => history.push(`/profiles/${id}/edit/instrument`)}
+          aria-label="edit-instrument(s)"
+        >
+          <i className="fas fa-guitar" id={styles.DropDown} /> edit
+          instrument(s)
+        </Dropdown.Item>
+        <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit/username`)}
           aria-label="edit-username"
         >
