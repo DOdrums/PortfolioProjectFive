@@ -260,49 +260,22 @@ One of the main features is the ability to publish content in the social media p
 
 ![Publish content](src/assets/readme-files/publish-content.png)
 
-There are two type of content the user can publish: posts (pictures) or songs. Below you can see the example for publishing a song. In this form, the user will be able to attach song file only with mp3 format. They will be also required to add a title to the song and a description.
+There are two type of content the user can publish: posts (pictures) or songs. Below you can see the example for publishing a song. In this form, the user will be able to attach song file only with mp3 or mp4a formats. They will be also required to add a title to the song and a description.
 
 ![Publish song](src/assets/readme-files/add-song.png)
+
+![Publish song-validation](src/assets/readme-files/error-song.png)
+
+The same field validators happens with publishing a post.
+
+![Publish post-validation](src/assets/readme-files/error-post.png)
+
 
 #### Sign-out
 
 The last feature visible from the top bar when a user is signed in is the sign out button. By clicking on 'sign out', the user will be automatically logged out and the page with refresh to the general Home page.
 
 ![Sign out](src/assets/readme-files/sign-out.png)
-
-
-
-#### Admin
-
-Site owner has a lot of control over the website and database entries via the admin panel. If they login as a superuser, they can edit/delete/add a whole range of objects:
-
-![admin](static/images/admin.png)
-
-The user can look at registered email-adresses, appointments, gallery images, planning, treatments and users. The social accounts are not in use and groups can be used if wanted. Let's have a look at some of them.
-
-The first thing you would probably add is a planning, so users know which times they can book. This is what the planning object looks like:
-
-![admin-planning](static/images/admin-planning.png)
-
-After adding a planning, some treatments should be added, so a user can actually book a treatment. The treatments can be displayed in the booking module, on the home page and treatment page, both or neither. This is what the overview of different treatments will look like:
-
-![admin-treatments](static/images/admin-treatments.png)
-
-A treatment object looks as follows:
-
-![admin-change-treatment](static/images/admin-change-treatment.png)
-
-After adding these object, a user should now be able to see a fully functional book page and be able to book an appointment. After some appointments are booked, you'll see a list of appointments in the admin panel:
-
-![admin-appointments](static/images/admin-appointments.png)
-
-Which when opened, look as follows:
-
-![admin-change-appointment](static/images/admin-change-appointment.png)
-
-The final thing that can be added is some images for the gallery page.
-
-![admin-gallery](static/images/admin-gallery.png)
 
 ### Future Features
 
