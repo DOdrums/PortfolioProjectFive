@@ -156,21 +156,24 @@ The color scheme of the salon itself was used, see the image below. It creates a
 
 ### Features
 
-The app's biggest feature is of course the booking page and consequently, the user dashboard. These two pages are all you need, to book an appointment, cancel the booked appointment or change its date. This is where we will start our journey:
+The app is divided in multiple features that create a full and complete product. Let's start from the home page where the user can view all posts:
 
-#### Book page
+#### Home page
 
-This page is where most users, especially the recurring ones, will spent the grunt of their time. When you first open the page, you will be welcomed by a simple form with datepicker. You are urged to select a treatment first, since the duration of the treatment is relevant for which times are bookable.
+This page is where all users will be able to see post from other users, even if they haven't signed up in the platform. For this reason, there are two versions of this view. The main difference is the top bar.
 
-![book page](static/images/book.png)
+For users that go to https://melo.herokuapp.com/, the view will be as showed below:
 
-After selecting a treatment, the datepicker will become fully visible and usable and users can now select a date. When you select a date, the available times in the time picker will be rendered and user can scroll through the available times. After user picks a time, the time gets entered automatically in the date field of the booking form. The other fields in the form are either auto-filled when user is logged in, or filled in by user upon booking.
+![Top bar general, home page](src/assets/readme-files/melo-top-bar-general.png)
 
-![book page treatment selected](static/images/book-selected-treatment.png)
+The users has the option to view posts and most mic'd songs (will be described later), sing up if they are new to the platform, or sing in if they already have an account.
+With the sign up bottom, they will be rerouted to a sign up form which asks for basic information manemy the Username, new password, and confirmation of the password. By clicking on the 'sing up' bottom, they will create a account. However, if they already have a profile, they will be able to log in following the "Already have an account? Sing in" bottom below the form, or the 'Sing in' bottom in the top bar.
 
-After hitting the book button, user will get confirmation of their booking and are urged to go to their account dashboard.
+![sign up page](src/assets/readme-files/melo-sign-up.png)
 
-![book page confirmation](static/images/book-confirmation.png)
+When the user already has a profile, they can click on the 'Sign in' bottom with will take them to the sing in page. This page asks only for the Username and password and gives the chance to create a new account with the 'Don't have an account yet? Sign up.' bottom.
+
+![sing in page](src/assets/readme-files/melo-sign-in.png)
 
 #### User dashboard
 
