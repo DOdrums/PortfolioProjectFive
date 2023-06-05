@@ -2,7 +2,7 @@
 
 ## Portfolio Project 5: Advanced Front End Development
 
-![Multi screen mockup](src/assests/readme-files/multi-device-view.png)
+![Multi screen mockup](src/assets/readme-files/multi-device-mockup.png)
 
 This project is built as part of the Code Institute Full Stack Software Development course. For this course, Dirk Ornee had to built a fifth Portfolio Project. The focus with this project lies on having a good interactive front-end built in React and a backend built with Django REST that functions as a API to the frontend. This repo contains the front end part of the project. Since Dirk Ornee is himself a musician, it seemed a good idea to built a social media platform for musicians, where users can find a connect with other musicians and discover and promote new music.
 
@@ -69,15 +69,15 @@ This project is built as part of the Code Institute Full Stack Software Developm
 
 ### Business Goals
 
-The main goal of this project is to give a user the ability to book appointments at the NailsbyFaar nail salon. User should also get a good feeling for the salon and know what to expect from the treatments. If the user books an appointment, they should be able to make updates to their appointments in a user dashboard.
+The main goal of this project is to give a user the ability to interact with other musicians and share their own contanct in a social media platform called Melo. By creating a profile in Melo, the user should also be able to share with the network information such as country of residence, instrument of choice and level, and whether they are looking for a bandmember or a band to play in.
 
 ### Target Audience
 
-It might be obvious, but the target audience of this website is people who love getting their nails done! There isn't much more to be said about it, it can be people who go get their nails done for the first time, people who've gotten their nails done hundreds of times or people who are recurring customers at this specific salon. As long as they like pretty nails!
+It might be obvious, but the target audience of this social media platform is musicians. Melo is the platform where musicians from all level and genre get to together and share their love for music. It is made for beginners to get inspired and follow their role models, but also for professional to share their lastest proects and tunes.
 
 ### User Stories
 
-User stories were written together with salon owner and were all written to fit within the agile methodology. They have the following criteria:
+The user stories have the following criteria:
 
 - title
 - clear description
