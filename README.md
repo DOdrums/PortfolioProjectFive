@@ -89,13 +89,13 @@ The user stories have the following criteria:
 
 In the picture below you can see an example of the user stories before work on the project was started:
 
-![user stories board](static/images/user-stories-1.png)
+![user stories board](src/assets/readme-files/user-stories-melo-1.png)
 
 And the user stories board after finishing the project:
 
-![user stories board updated](static/images/user-stories-2.png)
+![user stories board updated](src/assets/readme-files/user-stories-melo-2.png)
 
-As you can see, only one user story was left, which didn't fit in the scope of the project in the end. Since it was a 'could have' the decision to leave it out was easily made. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/3/views/1)
+As you can see, five user stories was left, which didn't fit in the scope of the project in the end. Since they were a 'could have' or 'should have' the decision to leave it out was easily made. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/3/views/1)**{<-- link needs to change}**
 
 ### Structure of the app
 
