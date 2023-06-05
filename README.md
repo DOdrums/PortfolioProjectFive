@@ -205,7 +205,7 @@ It is important to keep in mind that only users who are singed in in their accou
 
 Fun fact about the "Most micd songs" feauture is that it doesn't only appear in the home page, but also in all the other pages (wall. mic'd and profile) so users can always related to this list.
 
-### Wall
+### Wall page
 
 Users can go to their wall by clicking on the icon on the top bar. As one might noticed, it looks very similar to the Home page. The difference between the Home page and the wall is that while in the Home page the user views posts and songs from all the accounts in Melo, in their wall they view posts and songs _only_ from accounts they follow.
 
@@ -217,79 +217,33 @@ A user can follow and unfollow an account by clicking on the username on top of 
 
 More details about the profile page will be describe later in this feature list.
 
-#### Mic'd
+#### Mic'd page
 
+In the Mic'd page, the user is able to view all the song they mic'd (liked by clicking on the mic icon) from all accounts, even if they don't follow them. 
 
-By default, the user's personal info is not editable, to limit the chance of user-error. If the user decides they want to chance some of their info, they can hit the edit button, which will cause the 'First name', 'Last name' and 'Phone number' field to pop open.
+![Mic'd page](src/assets/readme-files/micd-page.png)
 
-![user dashboard personal info edit](static/images/dashboard-personal-info.png)
+The user can of course decide to un-mic'd songs at any point by clicking on the red mic under the song. The mic will turn grey and the song will be removed from the Mic'd page. 
 
-After hitting 'save', the fields will now all become uneditable again and a little alert will slide in view confirming the edits were saved to the database. After 4 seconds this alert will slide out of the way, but a user can also close the alert themselves if they wish.
+#### Profile page
 
-![user dashboard personal info edit confirmation](static/images/dashboard-personal-info-confirmation.png)
+By clicking on the 'profile button', the user will view their own profile. This includes the main information they decide to share with the network, icluding:
+- name
+- profile picture
+- whether or not they are looking for a bandmate or a band to play in
+- country of residence
+- alias
+- bio
+- contact info.
 
-On the other side of the dashboard, user will find all their booked appointments. Which they can expand like an 'accordion' by clicking on the element.
+Below the personal information, the user can also view their own posts and songs.
 
-![user dashboard booked appointments](static/images/dashboard-appt.png)
+![Profile page](src/assets/readme-files/profile-page.png)
 
-When the date of an appointment is less than 48 hours in the future, it's not possible to change or cancel an appointment, which is indicated by greyed out buttons.
+If the user wants to make any changes to their personal information, they will be able to do so by clicking on the thee dots on the right top corner.
+With this list, the user can also opt to add ot edit their instrument of choice, change their username and password.
 
-![user dashboard cancel blocked](static/images/dashboard-cancel-blocked.png)
-
-When an appointment lays further in the future, user can can cancel the appointment by clicking on the cancel button.
-When cancel gets clicked, user will be asked to confirm their choice, by a modal that pops up. This is to make sure the user really meant to click the cancel button, since cancelling an appointment by mistake would be very inconvenient.
-
-![user dashboard cancel modal](static/images/dashboard-cancel.png)
-
-The other button present in the appointment accordions is a 'Change date' button. This button will allow the user to change the date of the appointment. After clicking the button, they will be redirected to a page similar to the booking page, except the treatment is pre-selected. Furthermore, the only thing they can change is the date.
-
-![user dashboard edit](static/images/dashboard-edit.png)
-
-#### Home
-
-Let's get on with the rest of the website. The home page features a few elements. We'll look at them from top to bottom.
-
-#### Nav bar
-
-At the top of the page you'll find a nav bar. This bar has two appearances, for being displayed either on top of the hero-image of the homepage, or above the content of the other pages.
-
-![homepage-nav](static/images/nav-home.png)
-
-![homepage-other](static/images/nav-other.png)
-
-The nav bar will display either a login button, or when user is logged in, their name. When user clicks their name, a menu will pop out with the options to log out or go to their user dashboard.
-
-![nav-user-logged-in](static/images/nav-user.png)
-
-#### Hero Image
-
-The hero image will probably be the very first element that catches the users eye when visiting this website. It's a stunning image shot at the Nail Salon.
-
-![hero-image](static/images/home-hero-image.png)
-
-#### Treatments
-
-After user scrolls down a bit, they will see the highlighted treatments. Clicking on the element will bring them to the treatments page, where they can read more about the treatment. Clicking on the book button will bring them to the book page.
-
-![home-treatments](static/images/home-treatments.png)
-
-#### About
-
-Below the treatments, user will find a little text about the salon, with a photo.
-
-![home-about](static/images/home-about.png)
-
-#### Footer
-
-At the bottom of the page, there is a footer. The footer houses a map with the location of NailsbyFaar, some contact info and the social links.
-
-![home-footer](static/images/home-footer.png)
-
-#### About
-
-The next page is the about page. This is simply an extension of the about section on the home page and features an image and some text about the owner of the salon.
-
-![about](static/images/about.png)
+![Edit profile menu](src/assets/readme-files/edit-profile-1.png)
 
 #### Treatments
 
