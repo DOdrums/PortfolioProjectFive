@@ -162,7 +162,7 @@ The app is divided in multiple features that create a full and complete product.
 
 When a user first go to https://melo.herokuapp.com/, the view will be as showed below:
 
-![Home page general](src/assets/readme-files/welcome-tp-melo.png)
+![Home page general](src/assets/readme-files/welcome-to-melo.png)
 
 In this page is all users will be able to see post from other users and most mic'd songs (will be described later), even if they haven't signed up in the platform. For this reason, in this page, they will have the chance to perform two main actions: sing in and sign up.
 
@@ -170,11 +170,11 @@ In this page is all users will be able to see post from other users and most mic
 
 With the sign up bottom, they will be rerouted to a sign up form which asks for basic information manemy the Username, new password, and confirmation of the password. By clicking on the 'sing up' bottom, they will create a account. However, if they already have a profile, they will be able to log in following the "Already have an account? Sing in" bottom below the form, or the 'Sing in' bottom in the top bar.
 
-![sign up page](src/assets/readme-files/melo-sign-up.png)
+![sign up page](src/assets/readme-files/melo-sing-up.png)
 
 When the user has already a profile, they can click on the 'Sign in' bottom with will take them to the sing in page. This page asks only for the Username and password and gives the chance to create a new account with the 'Don't have an account yet? Sign up.' bottom.
 
-![sing in page](src/assets/readme-files/melo-sign-in.png)
+![sing in page](src/assets/readme-files/melo-sing-in.png)
 
 Once the user is signed in with their (new) account, they will have more options in the top bar, as it shown in the picture below. 
 
