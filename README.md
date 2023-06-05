@@ -156,26 +156,31 @@ The color scheme of the salon itself was used, see the image below. It creates a
 
 ### Features
 
-The app is divided in multiple features that create a full and complete product. Let's start from the home page where the user can view all posts:
+The app is divided in multiple features that create a full and complete product. Since this is a social media platform, there is a small but significant different for users that sign in in their account or not. Let's start from this distincion:
 
-#### Home page
+#### Welcome to Melo
 
-This page is where all users will be able to see post from other users, even if they haven't signed up in the platform. For this reason, there are two versions of this view. The main difference is the top bar.
+When a user first go to https://melo.herokuapp.com/, the view will be as showed below:
 
-For users that go to https://melo.herokuapp.com/, the view will be as showed below:
+![Home page general](src/assets/readme-files/welcome-tp-melo.png)
+
+In this page is all users will be able to see post from other users and most mic'd songs (will be described later), even if they haven't signed up in the platform. For this reason, in this page, they will have the chance to perform two main actions: sing in and sign up.
 
 ![Top bar general, home page](src/assets/readme-files/melo-top-bar-general.png)
 
-The users has the option to view posts and most mic'd songs (will be described later), sing up if they are new to the platform, or sing in if they already have an account.
 With the sign up bottom, they will be rerouted to a sign up form which asks for basic information manemy the Username, new password, and confirmation of the password. By clicking on the 'sing up' bottom, they will create a account. However, if they already have a profile, they will be able to log in following the "Already have an account? Sing in" bottom below the form, or the 'Sing in' bottom in the top bar.
 
 ![sign up page](src/assets/readme-files/melo-sign-up.png)
 
-When the user already has a profile, they can click on the 'Sign in' bottom with will take them to the sing in page. This page asks only for the Username and password and gives the chance to create a new account with the 'Don't have an account yet? Sign up.' bottom.
+When the user has already a profile, they can click on the 'Sign in' bottom with will take them to the sing in page. This page asks only for the Username and password and gives the chance to create a new account with the 'Don't have an account yet? Sign up.' bottom.
 
 ![sing in page](src/assets/readme-files/melo-sign-in.png)
 
-#### User dashboard
+Once the user is sign in with their (new) account, they will have more options in the top bar, as it shown in the picture below.
+
+![Top bar sin in, home page](src/assets/readme-files/melo-top-bar-in.png)
+
+#### Home page
 
 When the user goes to their account dashboard, they are greeted by two sections: a personal info section and a section with all their booked appointments (if any).
 
