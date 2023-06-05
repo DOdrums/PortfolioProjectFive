@@ -176,15 +176,32 @@ When the user has already a profile, they can click on the 'Sign in' bottom with
 
 ![sing in page](src/assets/readme-files/melo-sign-in.png)
 
-Once the user is sign in with their (new) account, they will have more options in the top bar, as it shown in the picture below.
+Once the user is signed in with their (new) account, they will have more options in the top bar, as it shown in the picture below. 
 
 ![Top bar sin in, home page](src/assets/readme-files/melo-top-bar-in.png)
 
+Let's talk about each of these feautes one by one starting with the Home page.
+
 #### Home page
 
-When the user goes to their account dashboard, they are greeted by two sections: a personal info section and a section with all their booked appointments (if any).
+As discussed earlier, the home page is visible for both users that don't have an account yet, and for those who do. This section is divided into two main features, the posts and song sections, and the 'Most mic'd songs' section.
 
-![user dashboard](static/images/dashboard.png)
+The post and song section displayes all posts and song uploaded by any user in chronological other, from newest to oldest. 
+
+![Post and songs section home page](src/assets/readme-files/posts-songs-home-page.png)
+
+In this page, users are able to:
+- like a posts by clicking on the heart icon below the picture. The heart will turn red to confirm the like
+- like a song by clicking on the microphone (mic) incon below the song. The mic will turn red to confirm the like (as shown in picture above)
+- comment on posts and songs by clicking on the speach bubbles icon below the posts and songs. This will take the user to anothe page where they can add their comment and view other comments, as shown in the picture below.
+
+![Comment on song](src/assets/readme-files/comment.png)
+
+It is important to keep in mind that only users who are singed in in their account will be able to like and comment on posts and songs.
+
+The other section in the Home page is the 'Most mic'd songs'. 
+
+
 
 By default, the user's personal info is not editable, to limit the chance of user-error. If the user decides they want to chance some of their info, they can hit the edit button, which will cause the 'First name', 'Last name' and 'Phone number' field to pop open.
 
