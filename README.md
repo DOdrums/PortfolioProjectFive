@@ -186,7 +186,7 @@ Let's talk about each of these feautes one by one starting with the Home page.
 
 As discussed earlier, the home page is visible for both users that don't have an account yet, and for those who do. This section is divided into two main features, the posts and song sections, and the 'Most mic'd songs' section.
 
-The post and song section displayes all posts and song uploaded by any user in chronological other, from newest to oldest. 
+1. The post and song section displayes all posts and song uploaded by any user in chronological other, from newest to oldest. 
 
 ![Post and songs section home page](src/assets/readme-files/posts-songs-home-page.png)
 
@@ -199,8 +199,25 @@ In this page, users are able to:
 
 It is important to keep in mind that only users who are singed in in their account will be able to like and comment on posts and songs.
 
-The other section in the Home page is the 'Most mic'd songs'. 
+2. The other section in the Home page is the 'Most mic'd songs'. This is the top 10 list of the most mic'd (like by clicking on the mic icon) songs of all time. It is created by calculating the amount of mics songs posted in the home page have. The song with the most mics, becames number one in the list. Users can always click on any of the songs in the list to have a listen and view the comments left for that song.
 
+![Most mic'd songs](src/assets/readme-files/most-micd-songs.png)
+
+Fun fact about the "Most micd songs" feauture is that it doesn't only appear in the home page, but also in all the other pages (wall. mic'd and profile) so users can always related to this list.
+
+### Wall
+
+Users can go to their wall by clicking on the icon on the top bar. As one might noticed, it looks very similar to the Home page. The difference between the Home page and the wall is that while in the Home page the user views posts and songs from all the accounts in Melo, in their wall they view posts and songs _only_ from accounts they follow.
+
+![Wall](src/assets/readme-files/wall.png)
+
+A user can follow and unfollow an account by clicking on the username on top of the post or song. This will bring them to the account's profile and on the top right corner of the profile, the user can click on the bottom to follow or unfollow the account.
+
+![Follow an account](src/assets/readme-files/follow-an-account.png)
+
+More details about the profile page will be describe later in this feature list.
+
+#### Mic'd
 
 
 By default, the user's personal info is not editable, to limit the chance of user-error. If the user decides they want to chance some of their info, they can hit the edit button, which will cause the 'First name', 'Last name' and 'Phone number' field to pop open.
