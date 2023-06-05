@@ -227,7 +227,7 @@ The user can of course decide to un-mic'd songs at any point by clicking on the 
 
 #### Profile page
 
-By clicking on the 'profile button', the user will view their own profile. This includes the main information they decide to share with the network, icluding:
+By clicking on the 'profile button', the user will view their own profile. This includes the personal information they decide to share with the network, icluding:
 - name
 - profile picture
 - whether or not they are looking for a bandmate or a band to play in
@@ -240,44 +240,37 @@ Below the personal information, the user can also view their own posts and songs
 
 ![Profile page](src/assets/readme-files/profile-page.png)
 
-If the user wants to make any changes to their personal information, they will be able to do so by clicking on the thee dots on the right top corner.
-With this list, the user can also opt to add ot edit their instrument of choice, change their username and password.
+If the user wants to make any changes to their profile information, they will be able to do so by clicking on the thee dots on the right top corner.
 
 ![Edit profile menu](src/assets/readme-files/edit-profile-1.png)
 
-#### Treatments
+With this list, the user can also opt to add or change
+- any object in their personal info 
+![Edit profile](src/assets/readme-files/edit-profile-2.png)
 
-The treatments page features the main treatments with explanations of what they are. There is also a book button for the user to immediately book an appointment.
+- edit or change their instrument of choice including their lever
+![Edit instrument](src/assets/readme-files/edit-instrument.png)
 
-![treatments](static/images/treatments.png)
+-   change their username and password.
+![Edit username](src/assets/readme-files/edit-username.png)
 
-#### Gallery
+#### Publish posts and songs
 
-The gallery page displays a little gallery with some images of recent work done by Nailsbyfaar. On the bottom of the page, the user is encouraged to visit her instagram.
+One of the main features is the ability to publish content in the social media platform. The use can do so by clicking on the + button on the top bar from any page.
 
-![gallery](static/images/gallery.png)
+![Publish content](src/assets/readme-files/publish-content.png)
 
-![gallery-insta](static/images/gallery-insta.png)
+There are two type of content the user can publish: posts (pictures) or songs. Below you can see the example for publishing a song. In this form, the user will be able to attach song file only with mp3 format. They will be also required to add a title to the song and a description.
 
-#### Contact
+![Publish song](src/assets/readme-files/add-song.png)
 
-The contact page displays a simple form for the user to fill out in order to send a message to the owner.
+#### Sign-out
 
-![contact](static/images/contact.png)
+The last feature visible from the top bar when a user is signed in is the sign out button. By clicking on 'sign out', the user will be automatically logged out and the page with refresh to the general Home page.
 
-#### Login/Logout
+![Sign out](src/assets/readme-files/sign-out.png)
 
-If a user doesn't have an account yet, they can sign up, by filling in the form.
 
-![signup](static/images/sign-up.png)
-
-Once a user has an account, they can login.
-
-![login](static/images/login.png)
-
-If the user wants to logout via the navbar, they'll have to confirm this decision.
-
-![logout](static/images/logout.png)
 
 #### Admin
 
