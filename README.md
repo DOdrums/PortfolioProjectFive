@@ -157,12 +157,6 @@ In this page, users are able to:
 
 It is important to keep in mind that only users who are signed in to their account will be able to like and comment on posts and songs.
 
-The other section in the Home page is the 'Most mic'd songs'. This is the top 10 list of the most mic'd songs of all time. It is created by listing all songs in order of mic's count and taking the top 10 songs of this list. Users can always click on any of the songs in the list to have a listen and view the comments left for that song.
-
-![Most mic'd songs](src/assets/readme-files/most-micd-songs.png)
-
-Fun fact about the "Most mic'd songs" feature is that it doesn't only appear in the home page, but also in all the other pages (Wall, Mic'd and Profile) so users can view this list at any time.
-
 ### Wall page
 
 Users can go to their wall by clicking on the icon on the top bar. The difference between the Home page and the Wall is that while in the Home page the user views posts and songs from all the accounts in Melo, in their Wall they view posts and songs _only_ from accounts they follow.
