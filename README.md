@@ -24,19 +24,17 @@ Front-End:
 
 ### Business Goals
 
-<<<<<<< HEAD
 The main goal of this project is to give a user the ability to find and connect with musicians on Melo. User is able to get a feel for a musicians playing style and ability and can immediately see (from the 'status' indicator) if somebody is available for new projects or not. Furthermore, a User can share his music and possibly gain some popularity with it, by appearing in the 'Most Mic'd Songs' list.
 
 ### Target Audience
 
 It might be obvious, but the target audience of this social media platform is musicians. Melo is the platform where musicians from all level and genre get to together and share their love for music. It is made for beginners to get inspired and follow their role models, but also for professional to share their latest projects and tunes.
-=======
+
 The main goal of this project is to give a user the ability to interact with other musicians and share their own content in a social media platform called Melo. By creating a profile in Melo, the user should also be able to share with the network information such as country of residence, instrument of choice and level, and whether they are looking for a bandmember or a band to play in.
 
 ### Target Audience
 
-The target audience of this social media platform is musicians. Melo is the platform where musicians from all levels, genre and background get to together and share their love for music. It is made for beginners to get inspired and follow their role models, but also for professionals to share their lastest projects and tunes.
->>>>>>> refs/remotes/origin/main
+The target audience of this social media platform is musicians. Melo is the platform where musicians from all levels, genre and background get to together and share their love for music. It is made for beginners to get inspired and follow their role models, but also for professionals to share their latest projects and tunes.
 
 ### User Stories
 
@@ -60,9 +58,8 @@ And the user stories board after finishing the project:
 
 <<<<<<< HEAD
 As you can see, four user stories was left, which didn't fit in the scope of the project in the end. Since they were a 'could have' or 'should have', the decision to leave them out was easily made. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/4)
-=======
-As you can see, five user stories were left which didn't fit in the scope of the project in the end. Since they were a 'could have' or 'should have' the decision to leave it out was easily made. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/3/views/1)**{<-- link needs to change}**
->>>>>>> refs/remotes/origin/main
+
+As you can see, five user stories were left which didn't fit in the scope of the project in the end. Since they were a 'could have' or 'should have' the decision to leave it out was easily made. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/4)
 
 ### Structure of the app
 
@@ -76,51 +73,41 @@ The color scheme was picked to display a calming and soothing feel. The platform
 
 ### Features
 
-<<<<<<< HEAD
 The app is divided into multiple features that create a full and complete product. Since this is a social media platform, logged in users will have a different user experience than logged out users. Let's start from this distinction:
 
 #### Welcome to Melo
 
 When a user first goes to https://melo.herokuapp.com/, the view will be as shown below:
-=======
-The app is divided in multiple features that create a full and complete product. Since this is a social media platform, there is a small but significant different for users that sign in in their account or not. Let's start from this distincion.
+
+The app is divided in multiple features that create a full and complete product. Since this is a social media platform, there is a small but significant different for users that sign in in their account or not. Let's start from this distinction.
 
 #### Welcome to Melo
 
 When a user first go to https://melo.herokuapp.com/, the view will appear as shown below:
->>>>>>> refs/remotes/origin/main
 
 ![Home page general](src/assets/readme-files/welcome-to-melo.png)
 
-<<<<<<< HEAD
 In this page all users will be able to see posts and songs from other users and the 'most mic'd songs' (will be described later) is displayed. They will have the chance to perform two main actions: sing in and sign up.
-=======
+
 In this page, all users will be able to see posts from other users and most mic'd songs (will be described later), even if they haven't signed up in the platform. For this reason, in this page, they will have the chance to perform two main actions: sing in and sign up.
->>>>>>> refs/remotes/origin/main
 
 ![Nav bar general, home page](src/assets/readme-files/melo-top-bar-general.png)
 
-<<<<<<< HEAD
 With the sign up bottom, they will be rerouted to a sign up form which asks for basic information: the Username, password, and confirmation of the password. By clicking on the 'sign up' button, they will create an account. However, if they already have a profile, they will be able to log in following the "Already have an account? Sing in" button below the form, or the 'Sign in' button in the nav bar.
-=======
+
 With the sign up button, they will be rerouted to a sign up form which asks for basic information namely the Username, new password, and confirmation of the password. By clicking on the 'sign up' button, they will create a account. However, if they already have a profile, they will be able to sign in following the 'Already have an account? Sign in' button under the form, or the 'Sign in' button in the nav bar.
->>>>>>> refs/remotes/origin/main
 
 ![sign up page](src/assets/readme-files/melo-sing-up.png)
 
-<<<<<<< HEAD
 If the user already has a user account, they can click on the 'Sign in' button which will take them to the sign in page. This page asks only for the Username and password and gives the chance to create a new account with the 'Don't have an account yet? Sign up.' button.
 
 ![sign in page](src/assets/readme-files/melo-sign-in.png)
 
-Once the user is signed in with their (new) account, they will have more options in the nav bar, as is shown in the picture below.
-=======
 When the user has already a profile, they can click on the 'Sign in' button which will take them to the sign in page. This page asks only for the Username and password and gives the chance to create a new account with the 'Don't have an account yet? Sign up.' button.
 
 ![sing in page](src/assets/readme-files/melo-sing-in.png)
 
-Once the user is signed in with their (new) account, they will have more options in the nav bar, as it is shown in the picture below. 
->>>>>>> refs/remotes/origin/main
+Once the user is signed in with their (new) account, they will have more options in the nav bar, as it is shown in the picture below.
 
 ![Nav bar sign in, home page](src/assets/readme-files/melo-top-bar-in.png)
 
@@ -130,32 +117,24 @@ Let's talk about each of these features one by one starting with the Home page.
 
 As discussed earlier, the home page is visible for both users that don't have an account yet, and for those who do. This section is divided into two main features, the posts and songs sections, and the 'Most mic'd songs' section.
 
-<<<<<<< HEAD
-1. The post and song section displays all posts and songs uploaded by any user in chronological other, from newest to oldest.
-=======
-1. The post and song section displays all posts and songs uploaded by any user in chronological other, from newest to oldest. 
->>>>>>> refs/remotes/origin/main
+The post and song section displays all posts and songs uploaded by any user in chronological other, from newest to oldest.
 
 ![Posts and songs section home page](src/assets/readme-files/posts-songs-home-page.png)
 
 In this page, users are able to:
-<<<<<<< HEAD
 
 - Like a post by clicking on the heart icon below the picture. The heart will turn red to confirm the like
 - Mic a song by clicking on the microphone (mic) icon below the song. The mic will turn red to confirm the like (as shown in picture above)
 - comment on posts and songs by clicking on the speech bubble icon below the posts and songs. This will take the user to the detail page of the post or song, where they can add their comment and view other comments, as shown in the picture below.
-=======
 - like a post by clicking on the heart icon below the picture. The heart will turn red to confirm the like;
-- like a song by clicking on the microphone (mic) incon below the song. The mic will turn red to confirm the like (as shown in picture above);
-- comment on posts and songs by clicking on the speach bubbles icon below the post and song. This will take the user to anothe page where they can add their comment and/or view other comments, as shown in the picture below.
->>>>>>> refs/remotes/origin/main
+- like a song by clicking on the microphone (mic) icon below the song. The mic will turn red to confirm the like (as shown in picture above);
+- comment on posts and songs by clicking on the speech bubbles icon below the post and song. This will take the user to another page where they can add their comment and/or view other comments, as shown in the picture below.
 
 ![Comment on song](src/assets/readme-files/comment.png)
 
 It is important to keep in mind that only users who are signed in to their account will be able to like and comment on posts and songs.
 
-<<<<<<< HEAD
-2. The other section in the Home page is the 'Most mic'd songs'. This is the top 10 list of the most mic'd songs of all time. It is created by listing all songs in order of mic's count and taking the top 10 songs of this list. Users can always click on any of the songs in the list to have a listen and view the comments left for that song.
+The other section in the Home page is the 'Most mic'd songs'. This is the top 10 list of the most mic'd songs of all time. It is created by listing all songs in order of mic's count and taking the top 10 songs of this list. Users can always click on any of the songs in the list to have a listen and view the comments left for that song.
 
 ![Most mic'd songs](src/assets/readme-files/most-micd-songs.png)
 
@@ -168,12 +147,12 @@ Users can go to their wall by clicking on the icon on the top bar. The differenc
 ![Wall](src/assets/readme-files/wall.png)
 
 A user can follow and unfollow an account by clicking on the username on top of the post or song. This will bring them to the account's profile and on the top right corner of the profile, the user can click on the button to follow or unfollow the account.
-=======
-2. The other section in the Home page is the 'Most mic'd songs'. This is the top 10 list of the most mic'd (like by clicking on the mic icon) songs of all time. It is created by calculating the amount of mics the songs posted in the home page have. The song with the most mics becames number 1 in the list. Users can always click on any of the songs in the list to have a listen and view the comments left for that song.
+
+2. The other section in the Home page is the 'Most mic'd songs'. This is the top 10 list of the most mic'd (like by clicking on the mic icon) songs of all time. It is created by calculating the amount of mics the songs posted in the home page have. The song with the most mics becomes number 1 in the list. Users can always click on any of the songs in the list to have a listen and view the comments left for that song.
 
 ![Most mic'd songs](src/assets/readme-files/most-micd-songs.png)
 
-Fun fact about the "Most mic'd songs" feauture is that it doesn't only appear in the home page, but also in all the other pages (wall, mic'd and profile) so users can always relate to this list.
+Fun fact about the "Most mic'd songs" feature is that it doesn't only appear in the home page, but also in all the other pages (wall, mic'd and profile) so users can always relate to this list.
 
 ### Wall page
 
@@ -182,7 +161,6 @@ Users can go to their wall by clicking on the icon on the nav bar. As one might 
 ![Wall](src/assets/readme-files/wall.png)
 
 A user can follow and unfollow an account by clicking on the username on top of the post or song. This will bring them to the account's profile and on the top right corner of the profile, they can click on the bottom to follow or unfollow the account.
->>>>>>> refs/remotes/origin/main
 
 ![Follow an account](src/assets/readme-files/follow-an-account.png)
 
@@ -190,11 +168,7 @@ More details about the profile page will be described later in this feature list
 
 #### Mic'd page
 
-<<<<<<< HEAD
-In the Mic'd page, the user is able to view all the songs they mic'd from all accounts, even if they don't follow them.
-=======
-In the Mic'd page, the user is able to view all the song from any account in Melo that they have mic'd (liked by clicking on the mic icon), even if they don't follow them. 
->>>>>>> refs/remotes/origin/main
+In the Mic'd page, the user is able to view all the song from any account in Melo that they have mic'd (liked by clicking on the mic icon), even if they don't follow them.
 
 ![Mic'd page](src/assets/readme-files/micd-page.png)
 
@@ -221,18 +195,14 @@ If the user wants to make any changes to their profile information, they will be
 
 ![Edit profile menu](src/assets/readme-files/edit-profile-1.png)
 
-<<<<<<< HEAD
-With this list, the user can also opt to add or change
-=======
 With this list, the user can also opt to add or change:
-- any credential in their personal info 
-![Edit profile](src/assets/readme-files/edit-profile-2.png)
->>>>>>> refs/remotes/origin/main
+
+- any credential in their personal info
+  ![Edit profile](src/assets/readme-files/edit-profile-2.png)
 
 - any field in their personal info
   ![Edit profile](src/assets/readme-files/edit-profile-2.png)
 
-<<<<<<< HEAD
 - edit or change their instrument of choice including their level
   ![Edit instrument](src/assets/readme-files/edit-instrument.png)
 
@@ -246,9 +216,9 @@ One of the main features is the ability to publish content in the social media p
 ![Publish content](src/assets/readme-files/publish-content.png)
 
 There are two type of content the user can publish: posts (pictures) or songs. Below you can see the example for publishing a song. In this form, the user will be able to attach a audio file of format mp3 or m4a. If the user tries to upload a song of different file format, the validator on the backend will send back feedback, saying the user tried to upload a song of the wrong file format. They will be also required to add a title to the song and a description.
-=======
+
 - change their username and password.
-![Edit username](src/assets/readme-files/edit-username.png)
+  ![Edit username](src/assets/readme-files/edit-username.png)
 
 #### Publish posts and songs
 
@@ -257,12 +227,11 @@ One of the main features is the ability to publish content in the social media p
 ![Publish content](src/assets/readme-files/publish-content.png)
 
 There are two type of content the user can publish: posts (pictures) or songs. Below you can see the example for publishing a song. In this form, the user will be able to attach song files only with mp3 or m4a formats. They will be also required to add a title to the song and a description.
->>>>>>> refs/remotes/origin/main
 
 ![Publish song](src/assets/readme-files/add-song.png)
 ![Publish song validation](src/assets/readme-files/error-song.png)
 
-A user can also upload images. This form looks the same as the song form, except the file is an image instead of a audio file. This form will validate the file as well.
+A user can also upload images. This form looks the same as the song form, except the file is an image instead of an audio file. This form will validate the file as well.
 
 ![Publish song](src/assets/readme-files/error-post.png)
 
@@ -272,14 +241,9 @@ The same field validators happens with publishing a post.
 
 ![Publish post-validation](src/assets/readme-files/error-post.png)
 
-
 #### Sign-out
 
-<<<<<<< HEAD
 The last feature visible from the nav bar when a user is signed in is the sign out button. By clicking on 'sign out', the user will be automatically logged out and the page will refresh to the general Home page.
-=======
-The last feature visible from the nav bar when a user is signed in is the sign out button. By clicking on 'sign out', the user will be automatically signed out and the page will refresh to the general Home page.
->>>>>>> refs/remotes/origin/main
 
 ![Sign out](src/assets/readme-files/sign-out.png)
 
@@ -288,7 +252,7 @@ The last feature visible from the nav bar when a user is signed in is the sign o
 As discussed in the user stories section, a few features have not been built, which would be nice to add later:
 
 - Filter wall for only posts or songs. Perhaps a user is in a loud area and can't listen to song, in this scenario it would be better to just view pictures. Or perhaps the user just wants to listen to some new tunes, so they can filter out the pictures.
-- Search Profiles. Though this has not been build, it was definitely planned, as it was a should have. The platform makes a bit more sense when you actually search for profiles with parameters like: instrument, instrument level, country, status. This way musicians can find bandmates or bands to play with even easier. The user story 'Filter Profile Search' connects with this feature.
+- Search Profiles. Though this has not been build, it was definitely planned, as it was a should have. The platform makes a bit more sense when you actually search for profiles with parameters like: instrument, instrument level, country, status. This way musicians can find band mates or bands to play with even easier. The user story 'Filter Profile Search' connects with this feature.
 - Profile stats. Though the profile already shows the amount of posts and songs a user has, it could also show if they arr currently in the Most Mic'd song List and what their highest ever position on the Most Mic'd song list has been.
 
 ## Credits
