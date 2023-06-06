@@ -56,9 +56,6 @@ And the user stories board after finishing the project:
 
 ![user stories board updated](src/assets/readme-files/user-stories-melo-2.png)
 
-<<<<<<< HEAD
-As you can see, four user stories was left, which didn't fit in the scope of the project in the end. Since they were a 'could have' or 'should have', the decision to leave them out was easily made. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/4)
-
 As you can see, five user stories were left which didn't fit in the scope of the project in the end. Since they were a 'could have' or 'should have' the decision to leave it out was easily made. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/4)
 
 ### Structure of the app
@@ -77,31 +74,17 @@ The app is divided into multiple features that create a full and complete produc
 
 #### Welcome to Melo
 
-When a user first goes to https://melo.herokuapp.com/, the view will be as shown below:
-
-The app is divided in multiple features that create a full and complete product. Since this is a social media platform, there is a small but significant different for users that sign in in their account or not. Let's start from this distinction.
-
-#### Welcome to Melo
-
 When a user first go to https://melo.herokuapp.com/, the view will appear as shown below:
 
 ![Home page general](src/assets/readme-files/welcome-to-melo.png)
-
-In this page all users will be able to see posts and songs from other users and the 'most mic'd songs' (will be described later) is displayed. They will have the chance to perform two main actions: sing in and sign up.
 
 In this page, all users will be able to see posts from other users and most mic'd songs (will be described later), even if they haven't signed up in the platform. For this reason, in this page, they will have the chance to perform two main actions: sing in and sign up.
 
 ![Nav bar general, home page](src/assets/readme-files/melo-top-bar-general.png)
 
-With the sign up bottom, they will be rerouted to a sign up form which asks for basic information: the Username, password, and confirmation of the password. By clicking on the 'sign up' button, they will create an account. However, if they already have a profile, they will be able to log in following the "Already have an account? Sing in" button below the form, or the 'Sign in' button in the nav bar.
-
 With the sign up button, they will be rerouted to a sign up form which asks for basic information namely the Username, new password, and confirmation of the password. By clicking on the 'sign up' button, they will create a account. However, if they already have a profile, they will be able to sign in following the 'Already have an account? Sign in' button under the form, or the 'Sign in' button in the nav bar.
 
 ![sign up page](src/assets/readme-files/melo-sing-up.png)
-
-If the user already has a user account, they can click on the 'Sign in' button which will take them to the sign in page. This page asks only for the Username and password and gives the chance to create a new account with the 'Don't have an account yet? Sign up.' button.
-
-![sign in page](src/assets/readme-files/melo-sign-in.png)
 
 When the user has already a profile, they can click on the 'Sign in' button which will take them to the sign in page. This page asks only for the Username and password and gives the chance to create a new account with the 'Don't have an account yet? Sign up.' button.
 
@@ -148,7 +131,7 @@ Users can go to their wall by clicking on the icon on the top bar. The differenc
 
 A user can follow and unfollow an account by clicking on the username on top of the post or song. This will bring them to the account's profile and on the top right corner of the profile, the user can click on the button to follow or unfollow the account.
 
-2. The other section in the Home page is the 'Most mic'd songs'. This is the top 10 list of the most mic'd (like by clicking on the mic icon) songs of all time. It is created by calculating the amount of mics the songs posted in the home page have. The song with the most mics becomes number 1 in the list. Users can always click on any of the songs in the list to have a listen and view the comments left for that song.
+The other section in the Home page is the 'Most mic'd songs'. This is the top 10 list of the most mic'd (like by clicking on the mic icon) songs of all time. It is created by calculating the amount of mics the songs posted in the home page have. The song with the most mics becomes number 1 in the list. Users can always click on any of the songs in the list to have a listen and view the comments left for that song.
 
 ![Most mic'd songs](src/assets/readme-files/most-micd-songs.png)
 
@@ -197,9 +180,6 @@ If the user wants to make any changes to their profile information, they will be
 
 With this list, the user can also opt to add or change:
 
-- any credential in their personal info
-  ![Edit profile](src/assets/readme-files/edit-profile-2.png)
-
 - any field in their personal info
   ![Edit profile](src/assets/readme-files/edit-profile-2.png)
 
@@ -232,8 +212,6 @@ There are two type of content the user can publish: posts (pictures) or songs. B
 ![Publish song validation](src/assets/readme-files/error-song.png)
 
 A user can also upload images. This form looks the same as the song form, except the file is an image instead of an audio file. This form will validate the file as well.
-
-![Publish song](src/assets/readme-files/error-post.png)
 
 ![Publish song-validation](src/assets/readme-files/error-song.png)
 
