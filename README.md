@@ -6,6 +6,48 @@
 
 This project is built as part of the Code Institute Full Stack Software Development course. For this course, Dirk Ornee had to built a fifth Portfolio Project. The focus of this project is having a good interactive front-end built in React and a backend built with Django REST that functions as a API to the frontend. This repo contains the front end part of the project. Since Dirk Ornee is himself a musician, it seemed a good idea to built a social media platform for musicians, where users can find a connect with other musicians and discover and promote new music.
 
+<!-- TOC -->
+
+- [Melo](#melo)
+  - [Portfolio Project 5: Advanced Front End Development](#portfolio-project-5-advanced-front-end-development)
+  - [Live Site](#live-site)
+  - [Github Repository](#github-repository)
+  - [UX](#ux)
+    - [Business Goals](#business-goals)
+    - [Target Audience](#target-audience)
+    - [User Stories](#user-stories)
+    - [Structure of the app](#structure-of-the-app)
+    - [Color Scheme](#color-scheme)
+    - [Features](#features)
+      - [Welcome to Melo](#welcome-to-melo)
+      - [Home page](#home-page)
+    - [Wall page](#wall-page)
+      - [Mic'd page](#micd-page)
+      - [Profile page](#profile-page)
+      - [Publish posts and songs](#publish-posts-and-songs)
+      - [Publish posts and songs](#publish-posts-and-songs)
+      - [Sign-out](#sign-out)
+    - [Future Features](#future-features)
+  - [Credits](#credits)
+    - [Code](#code)
+    - [Images](#images)
+    - [Technologies used](#technologies-used)
+      - [Frameworks, languages, other](#frameworks-languages-other)
+      - [Libraries](#libraries)
+      - [Components](#components)
+  - [Testing](#testing)
+  - [Security Features and Defensive Design](#security-features-and-defensive-design)
+    - [User authentication](#user-authentication)
+    - [Form Validation](#form-validation)
+  - [Deployment](#deployment)
+    - [Local Deployment](#local-deployment)
+    - [Production Deployment Initial](#production-deployment-initial)
+      - [Create Heroku app:](#create-heroku-app)
+      - [Deploy App on Heroku:](#deploy-app-on-heroku)
+  - [Acknowledgements](#acknowledgements)
+
+<!-- /TOC -->
+
 ## Live Site
 
 Back-End:

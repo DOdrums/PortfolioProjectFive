@@ -1,3 +1,12 @@
+<!-- TOC -->
+
+- [Browser Testing](#browser-testing)
+- [Device Testing](#device-testing)
+- [Manual Testing](#manual-testing)
+- [Bugs](#bugs)
+
+<!-- /TOC -->
+
 ## Browser Testing
 
 The project was tested extensively on Google Chrome and Safari browsers, where no browser compatibility issues came up.
