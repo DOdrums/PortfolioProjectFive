@@ -273,8 +273,16 @@ Images inside the app are all royalty free stock imagery taken from [stock image
 
 #### Libraries
 
-- [React-Bootstrap](https://react-bootstrap-v4.netlify.app/) - for being able to use Bootstrap-React components in React
-- [JWT-decode](https://www.npmjs.com/package/jwt-decode) - for easy decoding and creation of tokens.
+[React-Bootstrap](https://react-bootstrap-v4.netlify.app/) - for being able to use Bootstrap-React components in React
+[JWT-decode](https://www.npmjs.com/package/jwt-decode) - for easy decoding and creation of tokens.
+[react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component) - to give user a better experience by not having to click next page, but instead being able to "infinitely" scroll through posts and songs.
+
+#### Components
+
+- MoreDropdown.js - to display reusable dropdown in different places throughout the application
+- AxiosDefault.js - to make communicating with the backend easy
+- Asset.js - used to display spinners and other imagery throughout the application
+- CurrentUserContext.js - to check a users logged in status
 
 ## Testing
 
