@@ -226,8 +226,6 @@ There are two type of content the user can publish: posts (pictures) or songs. B
 
 A user can also upload images. This form looks the same as the song form, except the file is an image instead of an audio file. This form will validate the file as well.
 
-![Publish song-validation](src/assets/readme-files/error-song.png)
-
 The same field validators happens with publishing a post.
 
 ![Publish post-validation](src/assets/readme-files/error-post.png)
