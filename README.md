@@ -1,86 +1,40 @@
-<!-- vscode-markdown-toc -->
+# Melo
 
-- 1. [Portfolio Project 5: Advanced Front End Development](#PortfolioProject5:AdvancedFrontEndDevelopment)
-- 2. [Live Site](#LiveSite)
-- 3. [Github Repository](#GithubRepository)
-- 4. [UX](#UX)
-  - 4.1. [Business Goals](#BusinessGoals)
-  - 4.2. [Target Audience](#TargetAudience)
-  - 4.3. [Target Audience](#TargetAudience-1)
-  - 4.4. [User Stories](#UserStories)
-  - 4.5. [Structure of the app](#Structureoftheapp)
-  - 4.6. [Color Scheme](#ColorScheme)
-  - 4.7. [Features](#Features)
-    - 4.7.1. [Welcome to Melo](#WelcometoMelo)
-    - 4.7.2. [Home page](#Homepage)
-  - 4.8. [Wall page](#Wallpage)
-    - 4.8.1. [Mic'd page](#Micdpage)
-    - 4.8.2. [Profile page](#Profilepage)
-    - 4.8.3. [Publish posts and songs](#Publishpostsandsongs)
-    - 4.8.4. [Publish posts and songs](#Publishpostsandsongs-1)
-    - 4.8.5. [Sign-out](#Sign-out)
-  - 4.9. [Future Features](#FutureFeatures)
-- 5. [Credits](#Credits)
-  - 5.1. [Code](#Code)
-  - 5.2. [Images](#Images)
-  - 5.3. [Technologies used](#Technologiesused)
-    - 5.3.1. [Frameworks, languages, other](#Frameworkslanguagesother)
-    - 5.3.2. [Libraries](#Libraries)
-    - 5.3.3. [Components](#Components)
-- 6. [Testing](#Testing)
-- 7. [Security Features and Defensive Design](#SecurityFeaturesandDefensiveDesign)
-  - 7.1. [User authentication](#Userauthentication)
-  - 7.2. [Form Validation](#FormValidation)
-- 8. [Deployment](#Deployment)
-  - 8.1. [Local Deployment](#LocalDeployment)
-  - 8.2. [Production Deployment Initial](#ProductionDeploymentInitial)
-    - 8.2.1. [Create Heroku app:](#CreateHerokuapp:)
-    - 8.2.2. [Deploy App on Heroku:](#DeployApponHeroku:)
-- 9. [Acknowledgements](#Acknowledgements)
-
-<!-- vscode-markdown-toc-config
-	numbering=true
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc --># Melo
-
-## 1. <a name='PortfolioProject5:AdvancedFrontEndDevelopment'></a>Portfolio Project 5: Advanced Front End Development
+## Portfolio Project 5: Advanced Front End Development
 
 ![Multi screen mockup](src/assets/readme-files/multi-device-mockup.png)
 
 This project is built as part of the Code Institute Full Stack Software Development course. For this course, Dirk Ornee had to built a fifth Portfolio Project. The focus of this project is having a good interactive front-end built in React and a backend built with Django REST that functions as a API to the frontend. This repo contains the front end part of the project. Since Dirk Ornee is himself a musician, it seemed a good idea to built a social media platform for musicians, where users can find a connect with other musicians and discover and promote new music.
 
-## 2. <a name='LiveSite'></a>Live Site
+## Live Site
 
 Back-End:
 [Melo-api](https://melo-api.herokuapp.com/)
+
 Front-End:
 [Melo](https://melo.herokuapp.com/)
 
-## 3. <a name='GithubRepository'></a>Github Repository
+## Github Repository
 
 Back-End:
 [PortfolioProjectFiveApi](https://github.com/DOdrums/PortfolioProjectFiveAPI)
+
 Front-End:
 [portfolioprojectfive](https://github.com/DOdrums/portfolioprojectfive)
 
-## 4. <a name='UX'></a>UX
+## UX
 
-### 4.1. <a name='BusinessGoals'></a>Business Goals
+### Business Goals
 
 The main goal of this project is to give a user the ability to find and connect with musicians on Melo. User is able to get a feel for a musicians playing style and ability and can immediately see (from the 'status' indicator) if somebody is available for new projects or not. Furthermore, a User can share his music and possibly gain some popularity with it, by appearing in the 'Most Mic'd Songs' list.
 
-### 4.2. <a name='TargetAudience'></a>Target Audience
+### Target Audience
 
 It might be obvious, but the target audience of this social media platform is musicians. Melo is the platform where musicians from all level and genre get to together and share their love for music. It is made for beginners to get inspired and follow their role models, but also for professional to share their latest projects and tunes.
 
 The main goal of this project is to give a user the ability to interact with other musicians and share their own content in a social media platform called Melo. By creating a profile in Melo, the user should also be able to share with the network information such as country of residence, instrument of choice and level, and whether they are looking for a bandmember or a band to play in.
 
-### 4.3. <a name='TargetAudience-1'></a>Target Audience
-
-The target audience of this social media platform is musicians. Melo is the platform where musicians from all levels, genre and background get to together and share their love for music. It is made for beginners to get inspired and follow their role models, but also for professionals to share their latest projects and tunes.
-
-### 4.4. <a name='UserStories'></a>User Stories
+### User Stories
 
 The user stories have the following criteria:
 
@@ -100,23 +54,23 @@ And the user stories board after finishing the project:
 
 ![user stories board updated](src/assets/readme-files/user-stories-melo-2.png)
 
-As you can see, five user stories were left which didn't fit in the scope of the project in the end. Since they were a 'could have' or 'should have' the decision to leave it out was easily made. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/4)
+As you can see, four user stories were left which didn't fit in the scope of the project in the end. Since they were a 'could have' or 'should have' the decision to leave it out was easily made. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/4)
 
-### 4.5. <a name='Structureoftheapp'></a>Structure of the app
+### Structure of the app
 
 The app is designed to have a good natural flow, with minimal page reload necessary. When visiting the three main pages (Home, Wall, Most Mic'd), only the posts and songs get re-fetched and reloaded, but all the other elements stay as they are. This saves time on page reload and gives a general better User Experience. Most of the features of the app will be clear from the get go, especially considering most users will be familiar with social media platforms and their basic functionality.
 
-### 4.6. <a name='ColorScheme'></a>Color Scheme
+### Color Scheme
 
 The color scheme was picked to display a calming and soothing feel. The platform should be a place to relax and have fun with other musicians, not to compete. A lot of social media platforms have the tendency to drive competition in an unhealthy way. For this reason, the amount of like or mic's under a post or song are also not shown.
 
 ![color scheme](src/assets/readme-files/color-scheme.png)
 
-### 4.7. <a name='Features'></a>Features
+### Features
 
 The app is divided into multiple features that create a full and complete product. Since this is a social media platform, logged in users will have a different user experience than logged out users. Let's start from this distinction:
 
-#### 4.7.1. <a name='WelcometoMelo'></a>Welcome to Melo
+#### Welcome to Melo
 
 When a user first go to https://melo.herokuapp.com/, the view will appear as shown below:
 
@@ -140,7 +94,7 @@ Once the user is signed in with their (new) account, they will have more options
 
 Let's talk about each of these features one by one starting with the Home page.
 
-#### 4.7.2. <a name='Homepage'></a>Home page
+#### Home page
 
 As discussed earlier, the home page is visible for both users that don't have an account yet, and for those who do. This section is divided into two main features, the posts and songs sections, and the 'Most mic'd songs' section.
 
@@ -167,7 +121,7 @@ The other section in the Home page is the 'Most mic'd songs'. This is the top 10
 
 Fun fact about the "Most mic'd songs" feature is that it doesn't only appear in the home page, but also in all the other pages (Wall, Mic'd and Profile) so users can view this list at any time.
 
-### 4.8. <a name='Wallpage'></a>Wall page
+### Wall page
 
 Users can go to their wall by clicking on the icon on the top bar. The difference between the Home page and the Wall is that while in the Home page the user views posts and songs from all the accounts in Melo, in their Wall they view posts and songs _only_ from accounts they follow.
 
@@ -183,7 +137,7 @@ The other section in the Home page is the 'Most mic'd songs'. This is the top 10
 
 Fun fact about the "Most mic'd songs" feature is that it doesn't only appear in the home page, but also in all the other pages (wall, mic'd and profile) so users can always relate to this list.
 
-#### 4.8.1. <a name='Micdpage'></a>Mic'd page
+#### Mic'd page
 
 In the Mic'd page, the user is able to view all the song from any account in Melo that they have mic'd (liked by clicking on the mic icon), even if they don't follow them.
 
@@ -191,7 +145,7 @@ In the Mic'd page, the user is able to view all the song from any account in Mel
 
 The user can of course decide to un-mic'd songs at any point by clicking on the red mic under the song. The mic will turn grey and the song will be removed from the Mic'd page.
 
-#### 4.8.2. <a name='Profilepage'></a>Profile page
+#### Profile page
 
 By clicking on the 'profile button', the user will view their own profile. This includes the personal information they decide to share with the network, including:
 
@@ -223,7 +177,7 @@ With this list, the user can also opt to add or change:
 - change their username or password.
   ![Edit username](src/assets/readme-files/edit-username.png)
 
-#### 4.8.3. <a name='Publishpostsandsongs'></a>Publish posts and songs
+#### Publish posts and songs
 
 One of the main features is the ability to publish content in the social media platform. The user can do so by clicking on the + button on the top bar from any page.
 
@@ -234,7 +188,7 @@ There are two type of content the user can publish: posts (pictures) or songs. B
 - change their username and password.
   ![Edit username](src/assets/readme-files/edit-username.png)
 
-#### 4.8.4. <a name='Publishpostsandsongs-1'></a>Publish posts and songs
+#### Publish posts and songs
 
 One of the main features is the ability to publish content in the social media platform. The user can do so by clicking on the '+' button on the nav bar and from any page.
 
@@ -253,13 +207,13 @@ The same field validators happens with publishing a post.
 
 ![Publish post-validation](src/assets/readme-files/error-post.png)
 
-#### 4.8.5. <a name='Sign-out'></a>Sign-out
+#### Sign-out
 
 The last feature visible from the nav bar when a user is signed in is the sign out button. By clicking on 'sign out', the user will be automatically logged out and the page will refresh to the general Home page.
 
 ![Sign out](src/assets/readme-files/sign-out.png)
 
-### 4.9. <a name='FutureFeatures'></a>Future Features
+### Future Features
 
 As discussed in the user stories section, a few features have not been built, which would be nice to add later:
 
@@ -267,21 +221,21 @@ As discussed in the user stories section, a few features have not been built, wh
 - Search Profiles. Though this has not been build, it was definitely planned, as it was a should have. The platform makes a bit more sense when you actually search for profiles with parameters like: instrument, instrument level, country, status. This way musicians can find band mates or bands to play with even easier. The user story 'Filter Profile Search' connects with this feature.
 - Profile stats. Though the profile already shows the amount of posts and songs a user has, it could also show if they arr currently in the Most Mic'd song List and what their highest ever position on the Most Mic'd song list has been.
 
-## 5. <a name='Credits'></a>Credits
+## Credits
 
-### 5.1. <a name='Code'></a>Code
+### Code
 
 - [Stackoverflow(answer from 'Rajiv Singh')](https://stackoverflow.com/a/69746387/16545052) - for fixing the Heroku deployment bug.
 - [Stackoverflow(answer from 'Drew Reese')](https://stackoverflow.com/a/72394679) - for making a dropdown menu in the nav bar.
 
-### 5.2. <a name='Images'></a>Images
+### Images
 
 All images used in the readme are screenshots of the project and a multi device mock up generated with [mockup generator](https://techsini.com/multi-mockup/index.php)
 Images inside the app are all royalty free stock imagery taken from [stock imagery](https://www.pexels.com)
 
-### 5.3. <a name='Technologiesused'></a>Technologies used
+### Technologies used
 
-#### 5.3.1. <a name='Frameworkslanguagesother'></a>Frameworks, languages, other
+#### Frameworks, languages, other
 
 [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - to provide styling to the pages.
 
@@ -305,36 +259,36 @@ Images inside the app are all royalty free stock imagery taken from [stock image
 
 [Bulk resize](https://bulkresizephotos.com/en) - to batch resize photo's.
 
-#### 5.3.2. <a name='Libraries'></a>Libraries
+#### Libraries
 
 [React-Bootstrap](https://react-bootstrap-v4.netlify.app/) - for being able to use Bootstrap-React components in React
 [JWT-decode](https://www.npmjs.com/package/jwt-decode) - for easy decoding and creation of tokens.
 [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component) - to give user a better experience by not having to click next page, but instead being able to "infinitely" scroll through posts and songs.
 
-#### 5.3.3. <a name='Components'></a>Components
+#### Components
 
 - MoreDropdown.js - to display reusable dropdown in different places throughout the application
 - AxiosDefault.js - to make communicating with the backend easy
 - Asset.js - used to display spinners and other imagery throughout the application
 - CurrentUserContext.js - to check a users logged in status
 
-## 6. <a name='Testing'></a>Testing
+## Testing
 
 Extensive testing was done to make sure all the features work as expected. To read all about this, please go to the separate [testing document](TESTING.md).
 
-## 7. <a name='SecurityFeaturesandDefensiveDesign'></a>Security Features and Defensive Design
+## Security Features and Defensive Design
 
-### 7.1. <a name='Userauthentication'></a>User authentication
+### User authentication
 
 - A lot of the pages/routes in this app are only accessible to the logged in user. Furthermore, most POST and PUT features will be unavailable to users that aren't logged in. When trying to edit or delete data that isn't owned by the logged in used, the database will sent back an error saying you do not have permission for this action.
 
-### 7.2. <a name='FormValidation'></a>Form Validation
+### Form Validation
 
 Extensive form validation is used on the front end. You can see examples of this in the features section, where the add post and add song form show error messages. For example, some fields can not be empty, or the file is a wrong format. The sign in and sign up form also have validation, checking if the username is not already taken and if the passwords entered at sign up are identical.
 
-## 8. <a name='Deployment'></a>Deployment
+## Deployment
 
-### 8.1. <a name='LocalDeployment'></a>Local Deployment
+### Local Deployment
 
 To test the app locally, the terminal within VScode was used. The steps to run this:
 
@@ -343,11 +297,11 @@ To test the app locally, the terminal within VScode was used. The steps to run t
 - Hit the 'open browser' button or visit `http://localhost:8000/` in the browser.
 - Use the website as usual.
 
-### 8.2. <a name='ProductionDeploymentInitial'></a>Production Deployment Initial
+### Production Deployment Initial
 
 Before starting work, the project was deployed to Heroku. This was done early in the process, to prevent having to deal with difficulties of deployment close to the project deadline. The following steps needed to be performed:
 
-#### 8.2.1. <a name='CreateHerokuapp:'></a>Create Heroku app:
+#### Create Heroku app:
 
 - Login in to Heroku
 - Create a new app.
@@ -355,12 +309,12 @@ Before starting work, the project was deployed to Heroku. This was done early in
 - Give the new app a name and click "Create new app".
 - Select a region (Europe for this app).
 
-#### 8.2.2. <a name='DeployApponHeroku:'></a>Deploy App on Heroku:
+#### Deploy App on Heroku:
 
 - Click on the Deploy tab
 - Under "Deployment Method" click on "GitHub" to get access to your repository.
 - Enable Automatic Deploys" or click "Deploy Branch" to deploy your app.
 
-## 9. <a name='Acknowledgements'></a>Acknowledgements
+## Acknowledgements
 
 This website was built as part of the Full Stack Software Development course from Code Institute. I would like to thank my mentor Adeye Adegbenga, for his excellent feedback and guidance throughout the development of the project. I would also like to thank friends and family, who all took a look at the finished project to make sure it worked well and checked if I could improve things.
