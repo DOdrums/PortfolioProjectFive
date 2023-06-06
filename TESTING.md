@@ -13,7 +13,7 @@ The project was tested extensively on Google Chrome and Safari browsers, where n
 
 ## Device Testing
 
-The project was tested on a multitude of devices: several iPhones, android phones, linux laptops and Macbook Pro. The website was properly responsive on all devices.
+The project was tested on a multitude of devices: several iPhones, android phones, linux laptops and Macbook Pro. The website was properly responsive on all devices. However, because of cross device tracking protection on phones, the login functionality doesn't work out of the box. To make it functional, turn off prevention of cross-site tracking on your phone. On iphone, go to settings -> safari -> privacy & security -> Prevent Cross-Site Tracking.
 
 ## Manual Testing
 
