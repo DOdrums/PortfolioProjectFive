@@ -131,23 +131,13 @@ Users can go to their wall by clicking on the icon on the top bar. The differenc
 
 A user can follow and unfollow an account by clicking on the username on top of the post or song. This will bring them to the account's profile and on the top right corner of the profile, the user can click on the button to follow or unfollow the account.
 
+More details about the profile page will be described later in this feature list.
+
 The other section in the Home page is the 'Most mic'd songs'. This is the top 10 list of the most mic'd (like by clicking on the mic icon) songs of all time. It is created by calculating the amount of mics the songs posted in the home page have. The song with the most mics becomes number 1 in the list. Users can always click on any of the songs in the list to have a listen and view the comments left for that song.
 
 ![Most mic'd songs](src/assets/readme-files/most-micd-songs.png)
 
 Fun fact about the "Most mic'd songs" feature is that it doesn't only appear in the home page, but also in all the other pages (wall, mic'd and profile) so users can always relate to this list.
-
-### Wall page
-
-Users can go to their wall by clicking on the icon on the nav bar. As one might notice, it looks very similar to the Home page. The difference between the Home page and the wall is that while in the Home page the user views posts and songs from all the accounts in Melo, in their wall they view posts and songs _only_ from accounts they follow.
-
-![Wall](src/assets/readme-files/wall.png)
-
-A user can follow and unfollow an account by clicking on the username on top of the post or song. This will bring them to the account's profile and on the top right corner of the profile, they can click on the bottom to follow or unfollow the account.
-
-![Follow an account](src/assets/readme-files/follow-an-account.png)
-
-More details about the profile page will be described later in this feature list.
 
 #### Mic'd page
 
