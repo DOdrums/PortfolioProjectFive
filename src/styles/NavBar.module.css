@@ -10,7 +10,12 @@
     color: #bcc8c9;
 }
 
-/* temporary, look at later */
 .Dropdown {
     background-color: #ecab55;
+}
+
+@media screen and (max-width: 410px) {
+    .Logo {
+        height: 29px;
+    }
 }
