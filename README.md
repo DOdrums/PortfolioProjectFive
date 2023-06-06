@@ -227,17 +227,6 @@ One of the main features is the ability to publish content in the social media p
 
 There are two type of content the user can publish: posts (pictures) or songs. Below you can see the example for publishing a song. In this form, the user will be able to attach a audio file of format mp3 or m4a. If the user tries to upload a song of different file format, the validator on the backend will send back feedback, saying the user tried to upload a song of the wrong file format. They will be also required to add a title to the song and a description.
 
-- change their username and password.
-  ![Edit username](src/assets/readme-files/edit-username.png)
-
-#### Publish posts and songs
-
-One of the main features is the ability to publish content in the social media platform. The user can do so by clicking on the '+' button on the nav bar and from any page.
-
-![Publish content](src/assets/readme-files/publish-content.png)
-
-There are two type of content the user can publish: posts (pictures) or songs. Below you can see the example for publishing a song. In this form, the user will be able to attach song files only with mp3 or m4a formats. They will be also required to add a title to the song and a description.
-
 ![Publish song](src/assets/readme-files/add-song.png)
 ![Publish song validation](src/assets/readme-files/error-song.png)
 
